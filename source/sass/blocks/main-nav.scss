@@ -1,0 +1,16 @@
+.main-nav {
+  font-size: 20px;
+  line-height: 20px;
+  display: none;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.main-nav--open {
+  display: block;
+}
