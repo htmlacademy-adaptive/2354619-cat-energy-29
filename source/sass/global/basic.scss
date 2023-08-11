@@ -22,33 +22,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.button {
-  background-color: $button-color;
-  font-family: $oswald;
-  line-height: 20px;
-  font-size: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $text-color2;
-  border: 0;
-  color: $text-color2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-

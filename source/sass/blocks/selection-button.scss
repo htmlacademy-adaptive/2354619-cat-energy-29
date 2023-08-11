@@ -1,0 +1,15 @@
+.selection-button {
+  list-style: none;
+  margin: 0;
+  padding: 22px 0;
+  border-top: 1px solid $border-line;
+  border-bottom: 1px solid $border-line;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.selection-button__item {
+  display: flex;
+  column-gap: 15px;
+}

@@ -1,0 +1,77 @@
+.form__main-container {
+  padding: 39px 0 24px;
+}
+
+.form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.form__data-container {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+}
+
+.form__label {
+  white-space: nowrap;
+}
+
+.form__placeholder {
+  border: 1px solid $form-input;
+  width: 100%;
+  padding: 14px 15px;
+  margin-bottom: 14px;
+}
+
+.form__title {
+  color: $title-color;
+  font-size: 24px;
+  line-height: 26px;
+  margin: 0;
+  margin-top: 26px;
+}
+
+.form__personal-container {
+  padding: 35px 0 11px;
+}
+
+.form__host-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+  margin-bottom: 14px;
+}
+
+.form__input {
+  padding: 14px 15px;
+  width: 100%;
+}
+
+.form__input-svg {
+  position: absolute;
+  right: 15px;
+  display: block;
+}
+
+.form__button {
+  padding: 14px 0;
+  font-size: 16px;
+  width: 280px;
+  margin-bottom: 21px;
+}
+
+.form__required-fields {
+  color: $title-color;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $lato;
+  text-transform: initial;
+  display: flex;
+  justify-content: center;
+}

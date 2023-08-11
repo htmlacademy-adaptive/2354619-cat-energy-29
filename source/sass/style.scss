@@ -1,5 +1,7 @@
 @import "./global/variables.scss";
 @import "./global/basic.scss";
+@import "./global/button.scss";
+@import "./global/visually-hidden.scss";
 @import "./global/fonts.scss";
 @import "./blocks/page.scss";
 @import "./blocks/main-header.scss";
@@ -13,3 +15,13 @@
 @import "./blocks/main-footer.scss";
 @import "./blocks/social.scss";
 @import "./blocks/copyrights.scss";
+@import "./blocks/catalog-product.scss";
+@import "./blocks/catalog-list.scss";
+@import "./blocks/catalog-more.scss";
+@import "./blocks/catalog-additional.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/catalog-list-add.scss";
+@import "./blocks/program-selection.scss";
+@import "./blocks/form.scss";
+@import "./blocks/selection-button.scss";
+@import "./blocks/extra-button.scss";

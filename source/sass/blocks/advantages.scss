@@ -10,6 +10,7 @@
   font-family: $oswald;
   margin: 0;
   margin-bottom: 40px;
+  font-weight: 400;
 }
 
 .advantages__text {
@@ -24,7 +25,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  row-gap: 20px;
   flex-wrap: wrap;
   font-size: 14px;
   line-height: 18px;
@@ -33,12 +34,20 @@
 
 .advantages__item {
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/advantages-leaf.png");
+    left: 0;
+    top: 0;
+  }
 }
 
-.advantages__item::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/advantages-leaf.png");
-  left: 0;
-  top: 0;
-}
+// .advantages__item::before {
+//   content: "";
+//   position: absolute;
+//   background-image: url("../img/advantages-leaf.png");
+//   left: 0;
+//   top: 0;
+// }
