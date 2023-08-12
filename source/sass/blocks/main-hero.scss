@@ -1,0 +1,40 @@
+.main-hero {
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-hero__title {
+  color: $text-color2;
+  text-align: center;
+  font-family: $oswald;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 27px 35px 25px 36px;
+}
+
+.main-hero__subtitle {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $text-color2;
+  text-align: center;
+}
+
+.main-hero__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.main-hero__hero-button {
+  line-height: 18px;
+  font-size: 14px;
+  width: 280px;
+  height: 40px;
+  margin: 0 20px;
+}

@@ -1,0 +1,15 @@
+.copyrights {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $lato;
+}
+
+.copyrights__button {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: $text-color;
+  align-items: center;
+}

@@ -1,0 +1,82 @@
+.example {
+  background-color: $example-color;
+  padding: 20px;
+  padding-top: 25px;
+}
+
+.example__title {
+  color: $title-color;
+  font-size: 36px;
+  line-height: 40px;
+  font-family: $oswald;
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.example__description {
+  font-family: $lato;
+  line-height: 18px;
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__container-elements {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example__kilos,
+.example__days {
+  width: 124px;
+  min-height: 70px;
+  border: 1px solid $border-color;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $oswald;
+  position: relative;
+  border-radius: 5px;
+}
+
+.example__value-kilos,
+.example__value-days {
+  text-align: center;
+  color: $title-color;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-weight: 400;
+}
+
+.example__text-kilos,
+.example__text-days {
+  text-align: center;
+  font-family: $lato;
+  font-size: 12px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -14px;
+  right: 0;
+  left: 0;
+  line-height: 12px;
+  width: 77px;
+  background-color: $example-color;
+}
+
+.example__cost {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: 34px;
+  margin-bottom: 20px;
+  color: $title-color;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: $oswald;
+}
+
+.example__text-cost {
+  margin: 0;
+}

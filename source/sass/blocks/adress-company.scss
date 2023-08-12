@@ -1,0 +1,21 @@
+.adress-company__container {
+  padding: 26px 20px;
+  display: flex;
+  width: 320px;
+  align-items: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.adress-company__invite {
+  margin: 0;
+  color: $title-color;
+  font-size: 16px;
+  font-family: $oswald;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.adress-company__adress {
+  font-style: normal;
+}

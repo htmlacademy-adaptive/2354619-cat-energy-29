@@ -2,42 +2,50 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo" href="#">
-      <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="логотип Кэт энерджи">
-    </a>
-    <span class="main-title">
-      <img class="main-title__text-logo" src="img/logo-mobile-title.svg" width="101" height="18" alt="название Cat energy">
-    </span>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">
-          Открыть меню
+    <div class="main-header__container main-header__container--open">
+      <div class="main-header__nav-container">
+        <a class="main-header__logo" href="#">
+          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="логотип Кэт энерджи">
+        </a>
+        <span class="main-title">
+          <img class="main-title__text-logo" src="img/logo-mobile-title.svg" width="101" height="18" alt="название Cat energy">
         </span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current">
-            <a class="site-list__link" href="#">
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
+        <button class="main-header__burger-menu main-header__burger-menu--open" type="button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="3" x2="24" y2="3" stroke="black" stroke-width="2"/>
+            <line y1="11" x2="24" y2="11" stroke="black" stroke-width="2"/>
+            <line y1="19" x2="24" y2="19" stroke="black" stroke-width="2"/>
+          </svg>
+        </button>
       </div>
-    </nav>
+      <nav class="main-nav main-nav--open">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--current">
+              <a class="site-list__link" href="#">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main class="main-wrapper">
@@ -48,12 +56,12 @@
       <p class="main-hero__subtitle">
         Занялся собой? Займись котом!
       </p>
-      <a class="main-hero__hero-button" href="form.html">
-        Подобрать программу
-      </a>
       <picture class="main-hero__picture">
         <img class="main-hero__image" src="img/hero-image.png" width="280" height="270" alt="Продукция магазина">
       </picture>
+      <a class="main-hero__hero-button button" href="form.html">
+        Подобрать программу
+      </a>
     </section>
 
     <section class="cat-programs">
@@ -61,39 +69,43 @@
         Программы питания для кошек
       </h2>
       <ul class="cat-programs__list">
-        <li class="cat-programs__item">
+        <li class="cat-programs__item cat-programs__item--slim">
           <h3 class="cat-programs__title">
             Похудение
           </h3>
           <p class="cat-programs__description">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
-          <a class="cat-programs__link" href="catalog.html">
-            <span class="cat-programs__catalog">
-              Каталог slim
-            </span>
-            <svg width="32" height="12" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-              <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
-            </svg>
-          </a>
+          <div class="cat-programs__button-container">
+            <a class="cat-programs__link" href="catalog.html">
+              <span class="cat-programs__catalog">
+                Каталог slim
+              </span>
+              <svg width="32" height="12" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
+                <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
+              </svg>
+            </a>
+          </div>
         </li>
-        <li class="cat-programs__item">
+        <li class="cat-programs__item cat-programs__item--mass">
           <h3 class="cat-programs__title">
             Набор массы
           </h3>
           <p class="cat-programs__description">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </p>
-          <a class="cat-programs__link" href="catalog.html">
-            <span class="cat-programs__catalog">
-              Каталог pro
-            </span>
-            <svg width="32" height="12" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-              <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
-            </svg>
-          </a>
+          <div class="cat-programs__button-container">
+            <a class="cat-programs__link" href="catalog.html">
+              <span class="cat-programs__catalog">
+                Каталог pro
+              </span>
+              <svg width="32" height="12" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
+                <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
+              </svg>
+            </a>
+          </div>
         </li>
       </ul>
     </section>
@@ -135,29 +147,31 @@
       </p>
       <div class="example__container-elements">
         <div class="example__kilos">
-          <span class="example__value-kilos">
+          <h3 class="example__value-kilos">
             5 кг
-          </span>
+          </h3>
           <p class="example__text-kilos">
             Снижение веса
           </p>
         </div>
         <div class="example__days">
-          <span class="example__value-days">
+          <h3 class="example__value-days">
             60 дней
-          </span>
+          </h3>
           <p class="example__text-days">
             Затрачено времени
           </p>
         </div>
-      </div>
-      <div class="example__cost">
-        <p class="example__text-cost">
-          Затраты на питание:
-        </p>
-        <span class="example__value-cost">
-          15 000 руб.
-        </span>
+        <div class="example__cost">
+          <p class="example__text-cost">
+            <span class="example__text">
+              Затраты на питание:
+            </span>
+            <span class="example__value-cost">
+              15 000 руб.
+            </span>
+          </p>
+        </div>
       </div>
       <div class="example__cats-container">
         <img class="example__cat-image" src="img/example-cat-slider.png" width="280" height="256" alt="Слайдер в мобильной версии">
@@ -171,21 +185,24 @@
         <h2 class="adress-company__invite">
           Приглашаем к сотрудничеству дилеров!
         </h2>
-        <address>
+        <address class="adress-company__adress">
           ул. Большая Конюшенная, д. 19/8
           Санкт-Петербург
         </address>
       </div>
       <div class="google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610323!2d30.320858717443855!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1690675487178!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610323!2d30.320858717443855!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1690675487178!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+        <img src="img/map-img.jpg" width="1440" height="400" alt="Где карта, Билли?">
       </div>
     </section>
 
     <div class="main-footer__wrapper">
-      <a class="main-title" href="#">
-        <img class="main-title__text-logo" src="img/logo-mobile-title.svg" width="101" height="18" alt="название Cat energy">
-      </a>
+      <div class="main-footer__logo-container">
+        <a class="main-footer__logo-title main-title-link" href="#">
+          <img class="main-title__text-logo" src="img/logo-mobile-title.svg" width="101" height="18" alt="название Cat energy">
+        </a>
+      </div>
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">

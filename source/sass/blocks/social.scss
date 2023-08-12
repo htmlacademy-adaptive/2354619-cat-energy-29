@@ -1,0 +1,15 @@
+.social {
+  margin: 0;
+  padding: 20px;
+  border-top: 1px solid $border-line;
+  border-bottom: 1px solid $border-line;
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-gap: 24px;
+}

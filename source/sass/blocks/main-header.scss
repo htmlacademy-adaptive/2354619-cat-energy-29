@@ -1,0 +1,43 @@
+.main-header {
+  background-color: $bgcolor;
+  color: $text-color;
+  // display: flex;
+  // flex-direction: column;
+}
+
+.main-header__container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-header__nav-container {
+  display: flex;
+  padding: 13px 0 14px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header__burger-menu {
+  border: 0;
+  background-color: transparent;
+  align-self: center;
+  display: block;
+}
+
+// .main-header__logo {
+//   height: 65px;
+// }
+
+// @media (min-width: $tablet-width) {
+//   .main-header__logo {
+//     height: 50px;
+//     width: 60px;
+//   }
+// }
+
+// @media (min-width: $desktop-width) {
+//   .main-header__logo {
+//     height: 59px;
+//     width: 70px;
+//   }
+// }
