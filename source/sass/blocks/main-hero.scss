@@ -6,6 +6,55 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  margin: 0 0 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: 302px;
+    background-color: $bg-header;
+    z-index: -1;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 302px;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: inherit;
+    z-index: -2;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: contain;
+    }
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.main-hero__wrapper {
+  @media (min-width: $desktop) {
+    display: grid;
+    margin-left: 80px;
+    grid-template-columns: 35% 60%;
+    grid-template-rows: 20% 30% 10% 20%;
+  }
 }
 
 .main-hero__title {
@@ -16,6 +65,15 @@
   line-height: 36px;
   font-weight: 400;
   margin: 27px 35px 25px 36px;
+
+  @media (min-width: $tablet) {
+    color: $title-color;
+    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0;
+    grid-row: 2;
+  }
 }
 
 .main-hero__subtitle {
@@ -24,11 +82,39 @@
   text-transform: uppercase;
   color: $text-color2;
   text-align: center;
+  font-family: $oswald;
+
+  @media (min-width: $tablet) {
+    color: $title-color;
+    line-height: 20px;
+    font-size: 20px;
+    text-align: left;
+    grid-row: 3;
+    margin: 0;
+  }
 }
 
 .main-hero__image {
   display: block;
   margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.main-hero__picture {
+  @media (min-width: $tablet) {
+    grid-row: 1/4;
+  }
+
+  @media (min-width: $mobile) {
+    display: none;
+  }
 }
 
 .main-hero__hero-button {
@@ -37,4 +123,10 @@
   width: 280px;
   height: 40px;
   margin: 0 20px;
+
+  @media (min-width: $tablet) {
+    grid-row: 3;
+    margin: 0;
+    grid-row: 4;
+  }
 }
