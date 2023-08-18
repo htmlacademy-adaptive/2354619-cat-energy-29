@@ -44,8 +44,9 @@
 .main-hero__wrapper {
   @media (min-width: $desktop) {
     display: grid;
-    grid-template-columns: 35% 65%;
-    grid-template-rows: 50% 20% 20%;
+    margin-left: 80px;
+    grid-template-columns: 35% 60%;
+    grid-template-rows: 20% 30% 10% 20%;
   }
 }
 
@@ -63,6 +64,8 @@
     text-align: left;
     font-size: 60px;
     line-height: 60px;
+    margin: 0;
+    grid-row: 2;
   }
 }
 
@@ -72,11 +75,39 @@
   text-transform: uppercase;
   color: $text-color2;
   text-align: center;
+  font-family: $oswald;
+
+  @media (min-width: $tablet) {
+    color: $title-color;
+    line-height: 20px;
+    font-size: 20px;
+    text-align: left;
+    grid-row: 3;
+    margin: 0;
+  }
 }
 
 .main-hero__image {
   display: block;
   margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.main-hero__picture {
+  @media (min-width: $tablet) {
+    grid-row: 1/4;
+  }
+
+  @media (min-width: $mobile) {
+    display: none;
+  }
 }
 
 .main-hero__hero-button {
@@ -85,4 +116,10 @@
   width: 280px;
   height: 40px;
   margin: 0 20px;
+
+  @media (min-width: $tablet) {
+    grid-row: 3;
+    margin: 0;
+    grid-row: 4;
+  }
 }
