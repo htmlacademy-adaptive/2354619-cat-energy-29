@@ -2,14 +2,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
-}
 
-.catalog-list-add--property {
-  text-align: left;
-}
-
-.catalog-list-add--value {
-  text-align: right;
+  &--value {
+    text-align: right;
+  }
 }
 
 .catalog-list-add__table {
