@@ -35,4 +35,40 @@
   display: flex;
   justify-content: center;
   font-family: $oswald;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $title-color;
+    line-height: 24px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    color: $text-color2;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--index {
+    @media (min-width: $tablet) {
+      border-bottom: 2px solid $button-color;
+    }
+
+    @media (min-width: $desktop) {
+      border-bottom: 2px solid $text-color2;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    border-bottom: 2px solid $text-color2;
+  }
 }

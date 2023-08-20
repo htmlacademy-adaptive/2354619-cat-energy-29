@@ -6,6 +6,9 @@
   }
 
   @media screen and (min-width: $desktop) {
+    max-width: 1220px;
+    // padding: 0 110px;
+    padding: 0;
     margin: 0 auto;
   }
 }
