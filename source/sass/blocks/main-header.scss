@@ -1,18 +1,45 @@
 .main-header {
-  background-color: $bgcolor;
   color: $text-color;
-  // display: flex;
-  // flex-direction: column;
-}
 
-.main-header__container {
-  padding-left: 20px;
-  padding-right: 20px;
+  &--index {
+    @media (min-width: $desktop) {
+      // position: relative;
+      min-height: 694px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        min-height: 694px;
+        background-color: $bg-header;
+        z-index: -1;
+        right: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        right: 0;
+        top: 0;
+        height: 694px;
+        background-image: url("../img/index-background-desktop@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: cover;
+        z-index: -2;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+          background-size: cover;
+        }
+      }
+    }
+  }
 }
 
 .main-header__nav-container {
   display: flex;
-  padding: 13px 0 14px 0;
   align-items: center;
   justify-content: space-between;
 }
@@ -20,24 +47,49 @@
 .main-header__burger-menu {
   border: 0;
   background-color: transparent;
-  align-self: center;
   display: block;
 }
 
-// .main-header__logo {
-//   height: 65px;
-// }
+@media (min-width: $tablet) {
+  .main-header__burger-menu {
+    display: none;
+  }
+}
 
-// @media (min-width: $tablet-width) {
-//   .main-header__logo {
-//     height: 50px;
-//     width: 60px;
-//   }
-// }
+.main-header__logo {
+  display: block;
+}
 
-// @media (min-width: $desktop-width) {
-//   .main-header__logo {
-//     height: 59px;
-//     width: 70px;
-//   }
-// }
+.main-header__logo-image {
+  @media (min-width: $tablet) {
+    width: 174px;
+    height: 50px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    width: 202px;
+    height: 59px;
+    margin: 0;
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-header__text-logo-img {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-header__svg--open {
+  width: 24px;
+  height: 24px;
+}
