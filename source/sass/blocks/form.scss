@@ -1,5 +1,35 @@
+.form {
+  @include form-description;
+}
+
+.form__legend {
+  padding: 0;
+  margin: 0;
+}
+
+.form__wrapper-one {
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    align-items: center;
+  }
+}
+
 .form__main-container {
-  padding: 39px 0 24px;
+  row-gap: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 71px;
+    row-gap: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
 }
 
 .form__fieldset {
@@ -22,22 +52,71 @@
 }
 
 .form__placeholder {
+  @include form-description;
+
+  padding: 12px 15px;
   border: 1px solid $form-input;
   width: 100%;
-  padding: 14px 15px;
-  margin-bottom: 14px;
+  // padding: 10px 18px;
 }
 
 .form__title {
-  color: $title-color;
-  font-size: 24px;
-  line-height: 26px;
-  margin: 0;
-  margin-top: 26px;
+  @include form-title;
+}
+
+.form__title-one {
+  margin-top: 22px;
+
+  @media (min-width: $tablet) {
+    margin-top: 66px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 70px 0 36px;
+  }
+}
+
+.form__title-two {
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet) {
+    margin-top: 35px;
+    margin-bottom: 88px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 35px;
+    margin-bottom: 78px;
+  }
+}
+
+.form__title-three {
+  margin-top: 23px;
+
+  @media (min-width: $tablet) {
+    margin-top: 64px;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 70px;
+    margin-bottom: 24px;
+  }
 }
 
 .form__personal-container {
   padding: 35px 0 11px;
+
+  @media (min-width: $tablet) {
+    padding: 75px 0 11px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding: 39px 0 34px;
+  }
 }
 
 .form__host-container {
@@ -46,24 +125,64 @@
   align-items: center;
   column-gap: 13px;
   margin-bottom: 14px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
 }
 
 .form__input {
-  padding: 14px 15px;
+  @include form-description;
+  padding: 12px 14px;
   width: 100%;
+  border: 1px solid $border-color;
+
+  @media (min-width: $tablet) {
+    padding: 11px 20px;
+  }
 }
 
 .form__input-svg {
   position: absolute;
-  right: 15px;
+  right: 13px;
   display: block;
 }
 
+.form-button-span {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet) {
+    column-gap: 59px;
+    margin-top: 18px;
+    margin-bottom: 60px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop) {
+    column-gap: 80px;
+    margin-bottom: 80px;
+    margin-top: 25px;
+  }
+}
+
 .form__button {
-  padding: 14px 0;
-  font-size: 16px;
-  width: 280px;
-  margin-bottom: 21px;
+  @include button-main;
+  padding: 10px 78px;
+
+  @media (min-width: $tablet) {
+    padding: 14px 65px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 14px 208px;
+  }
 }
 
 .form__required-fields {
@@ -74,4 +193,30 @@
   text-transform: initial;
   display: flex;
   justify-content: center;
+  margin-top: 22px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    margin-bottom: 4px;
+    margin-top: 0;
+  }
+}
+
+.form__textarea {
+  @include form-description;
+  padding: 13px 14px;
+  width: 100%;
+  min-height: 150px;
+  border: 1px solid $form-input;
+  resize: none;
+
+  @media (min-width: $tablet) {
+    padding: 8px 19px;
+    min-height: 175px;
+  }
+
+  &::placeholder {
+    color: $text-color;
+    opacity: 1;
+  }
 }

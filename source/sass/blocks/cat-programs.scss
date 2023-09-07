@@ -1,5 +1,24 @@
 .cat-programs {
   padding: 20px 20px;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto;
+    margin-top: 82px;
+  }
+}
+
+.cat-programs__wrapper {
+  margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    margin: 0 auto;
+    max-width: 1220px;
+  }
 }
 
 .cat-programs__list {
@@ -10,12 +29,23 @@
   flex-direction: column;
   row-gap: 20px;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    row-gap: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
 }
 
 .cat-programs__item {
   background-color: $card-color;
-  min-width: 227px;
-  margin: 0 auto;
+  // min-width: 227px;
+  // margin: 0 auto;
   padding: 20px;
   position: relative;
 
@@ -28,52 +58,129 @@
     height: 50px;
     background-color: $button-color;
     border-radius: 50%;
+
+    @media (min-width: $tablet) {
+      width: 200px;
+      height: 200px;
+      top: 93px;
+      left: auto;
+      right: 64px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    min-width: 708px;
+    // min-height: 372px;
+    padding: 78px 52px 56px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 570px;
+    padding: 77px 42px 58px;
   }
 }
 
 .cat-programs__item--slim::after {
   content: "";
   position: absolute;
-  background-image: url("../img/index-cat-slim.svg");
+  background-image: url("../img/index-cat-slim-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 35px;
   height: 49px;
   left: 30px;
   top: 22px;
+
+  @media (min-width: $tablet) {
+    background-image: url("../img/index-cat-slim-tablet.svg");
+    width: 140px;
+    height: 194px;
+    top: 81px;
+    left: auto;
+    right: 93px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 70px;
+    height: 100px;
+    top: 39px;
+    left: 67px;
+    background-image: url("../img/index-cat-slim-desktop.svg");
+    right: 0;
+  }
 }
 
 .cat-programs__item--mass::after {
   content: "";
   position: absolute;
-  background-image: url("../img/index-cat-mass.svg");
+  background-image: url("../img/index-cat-mass-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 67px;
   height: 28px;
   left: 10px;
   top: 35px;
+
+  @media (min-width: $tablet) {
+    background-image: url("../img/index-cat-mass-tablet.svg");
+    width: 268px;
+    height: 112px;
+    top: 135px;
+    left: auto;
+    right: 29px;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: url("../img/index-cat-mass-desktop.svg");
+    width: 134px;
+    height: 56px;
+    top: 67px;
+    left: 33px;
+    right: 0;
+  }
 }
 
 .cat-programs__title {
-  color: $title-color;
-  line-height: 37px;
-  font-size: 24px;
-  font-family: $oswald;
-  text-transform: uppercase;
-  margin: 0;
+  @include cat-programs-title;
+
   padding-left: 70px;
-  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 51px;
+    margin-right: 20px;
+    padding-left: 172px;
+  }
 }
 
 .cat-programs__description {
-  font-size: 14px;
-  line-height: 18px;
-  font-family: $lato;
-  margin: 0;
+  @include cat-programs-subtitle;
+
   padding-bottom: 23px;
   padding-top: 22px;
   border-bottom: 1px solid $border-line;
+
+  @media (min-width: $tablet) {
+    width: 340px;
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 10px;
+    width: auto;
+  }
 }
 
 .cat-programs__link {
@@ -84,9 +191,26 @@
   font-family: $oswald;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
 .cat-programs__button-container {
   padding-top: 19px;
+
+  @media (min-width: $tablet) {
+    padding-top: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 3px;
+    padding-left: 10px;
+  }
+}
+
+.cat-programs__catalog {
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

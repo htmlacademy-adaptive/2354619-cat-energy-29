@@ -1,4 +1,4 @@
-.main-header__container {
+.container {
   padding: 0 20px;
 
   @media screen and (min-width: $tablet) {
@@ -6,9 +6,163 @@
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 1220px;
-    // padding: 0 110px;
-    padding: 0;
+    max-width: 1440px;
+    padding: 0 110px;
     margin: 0 auto;
+  }
+}
+
+@mixin container-hero {
+  padding: 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1440px;
+    padding: 0 110px;
+    margin: 0 auto;
+  }
+}
+
+@mixin hero-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: $oswald;
+  color: $text-color2;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    color: $title-color;
+    text-align: left;
+  }
+}
+
+@mixin hero-subtitle {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $oswald;
+  text-transform: uppercase;
+  color: $text-color2;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    color: $title-color;
+    text-align: left;
+  }
+}
+
+@mixin all-content-title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: $title-color;
+  font-family: $oswald;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@mixin all-content-subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color;
+  font-family: $lato;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin cat-programs-title {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  color: $title-color;
+  text-transform: uppercase;
+  font-family: $oswald;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@mixin cat-programs-subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color;
+  font-family: $lato;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    color: $title-color;
+  }
+}
+
+@mixin button-main {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 44px;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 14px 26px;
+  }
+}
+
+@mixin form-title {
+  font-family: $oswald;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $title-color;
+  padding: 0;
+  margin: 0;
+  text-transform: initial;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@mixin form-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $text-color;
+  font-family: $oswald;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

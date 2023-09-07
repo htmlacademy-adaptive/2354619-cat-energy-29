@@ -7,9 +7,61 @@
   display: flex;
   flex-direction: column;
   gap: 13px;
+
+  @media (min-width: $tablet) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 26px;
+    border: 1px solid $form-input;
+  }
 }
 
 .selection-button__item {
   display: flex;
   column-gap: 15px;
+}
+
+.selection-button__label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 7px 0 5px 45px;
+
+  @media (min-width: $tablet) {
+    padding: 5px 0 5px 60px;
+  }
+}
+
+.selection-button__span {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $form-contacts-border;
+  border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.selection-button__input[type="radio"]:checked + .selection-button__span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: $button-color;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet) {
+    width: 20px;
+    height: 20px;
+  }
 }

@@ -1,10 +1,36 @@
+.adress-company {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 .adress-company__container {
   padding: 26px 20px;
   display: flex;
-  width: 320px;
   align-items: center;
-  line-height: 20px;
-  font-size: 14px;
+  background-color: $card-color;
+
+  @media (min-width: $tablet) {
+    padding: 60px 66px 60px 74px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    z-index: 1;
+    background-color: $bgcolor;
+    min-height: 199px;
+    left: 110px;
+    top: 95px;
+    padding: 61px 78px 59px 80px;
+    column-gap: 87px;
+    justify-content: flex-start;
+  }
 }
 
 .adress-company__invite {
@@ -14,8 +40,29 @@
   font-family: $oswald;
   font-weight: 400;
   text-transform: uppercase;
+  width: 140px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 163px;
+  }
 }
 
 .adress-company__adress {
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    width: 157px;
+    row-gap: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop) {
+    width: 157px;
+    row-gap: 20px;
+    text-align: left;
+  }
 }
