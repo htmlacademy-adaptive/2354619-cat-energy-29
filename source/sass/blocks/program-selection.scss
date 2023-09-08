@@ -1,24 +1,39 @@
 .program-selection {
-  padding: 0 20px;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  font-family: $oswald;
-}
+  @media (min-width: $tablet) {
+    padding-left: 74px;
+    padding-right: 66px;
+  }
 
-.program-selection-container {
-  font-size: 14px;
-  color: $title-color;
+  @media (min-width: $desktop) {
+    padding: 0 110px;
+  }
 }
 
 .program-selection__title {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
-  text-transform: initial;
-  margin: 27px 0 37px;
+  @include all-content-title;
+  // text-transform: initial;
+  margin: 38px 0 36px;
+
+  @media (min-width: $tablet) {
+    margin: 64px 0 54px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 70px 0 54px;
+  }
 }
 
 .program-selection__subtitle {
-  margin: 0;
+  @include form-description;
+  font-size: 14px;
+  color: $title-color;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 67px;
+  }
 }

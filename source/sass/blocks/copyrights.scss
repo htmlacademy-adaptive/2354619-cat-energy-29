@@ -4,6 +4,10 @@
   font-size: 16px;
   line-height: 20px;
   font-family: $lato;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
 }
 
 .copyrights__button {
@@ -12,4 +16,31 @@
   text-decoration: none;
   color: $text-color;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    column-gap: 23px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyrights-text {
+  transition: color 0.3s ease;
+}
+
+.copyrights__svg--html-academy {
+  transition: color 0.3s ease;
+  &:hover,
+  &:focus {
+    color: $button-color;
+  }
+}
+
+.copyrights-text:hover + .copyrights__svg--html-academy,
+.copyrights__svg--html-academy:hover + .copyrights-text,
+.copyrights-text:hover,
+.copyrights__svg--html-academy:hover {
+  color: $button-color;
 }

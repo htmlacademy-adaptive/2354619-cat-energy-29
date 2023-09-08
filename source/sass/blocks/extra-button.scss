@@ -1,5 +1,64 @@
 .extra-button {
   list-style: none;
-  padding: 34px 0;
+  padding: 33px 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 14px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    column-gap: 123px;
+    row-gap: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    column-gap: 104px;
+    row-gap: 0;
+  }
+}
+
+.extra-button__label {
+  position: relative;
+  display: block;
+  padding: 6px 0 5px 45px;
+  cursor: pointer;
+  min-width: 221px;
+
+  // @media (min-width: $tablet) {
+  //   min-width: 284px;
+  // }
+
+  // @media (min-width: $tablet) {
+  //   min-width: 221px;
+  // }
+}
+
+.extra-button__span {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $border-color;
+
+  @media (min-width: $tablet) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.extra-button__input[type="checkbox"]:checked + .extra-button__span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-image: url("/img/check-checkbox.svg");
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
 }

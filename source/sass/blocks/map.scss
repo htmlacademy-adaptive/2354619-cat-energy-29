@@ -1,0 +1,33 @@
+.map {
+  width: auto;
+  height: 362px;
+
+  @media (min-width: $tablet) {
+    width: auto;
+    height: 400px;
+  }
+
+  @media (min-width: $desktop) {
+    width: auto;
+    height: 400px;
+  }
+}
+
+// Убирает метки copyrights на карте
+.ymaps-2-1-79-copyrights-pane {
+  display: none;
+}
+
+.map__image--nojs {
+  display: block;
+
+  @media (min-width: $tablet) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1440px;
+    height: 400px;
+  }
+}

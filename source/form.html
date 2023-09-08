@@ -8,26 +8,39 @@
 </head>
 <body class="page__body">
     <header class="main-header">
-      <div class="main-header__container main-header__container--open">
-        <div class="main-header__nav-container">
-          <a class="main-header__logo" href="#">
-            <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="логотип Кэт энерджи">
-          </a>
-          <span class="main-title">
-            <img class="main-title__text-logo" src="img/logo-mobile-title.svg" width="101" height="18" alt="название Cat energy">
-          </span>
-          <button class="main-header__burger-menu main-header__burger-menu--open" type="button">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line y1="3" x2="24" y2="3" stroke="black" stroke-width="2"/>
-              <line y1="11" x2="24" y2="11" stroke="black" stroke-width="2"/>
-              <line y1="19" x2="24" y2="19" stroke="black" stroke-width="2"/>
-            </svg>
-          </button>
-        </div>
+      <div class="main-header__container">
         <nav class="main-nav main-nav--open">
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--current">
+
+          <div class="main-header__nav-container">
+            <a class="main-header__logo" href="#">
+              <picture>
+                <source media="(min-width: 1220px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="логотип Кэт энерджи">
+              </picture>
+            </a>
+            <span class="main-header__text-logo">
+              <img class="main-header__text-logo-img" src="img/logo-mobile-title.svg" width="101" height="18" alt="название Cat energy">
+            </span>
+            <button class="main-header__burger-menu main-header__burger-menu--open" type="button" id="toggleButton">
+              <svg class="main-header__svg--open">
+                <use xlink:href="#nav-open"></use>
+              </svg>
+            </button>
+          </div>
+
+            <svg style="display: none;">
+              <symbol id="nav-open" viewBox="0 0 24 24">
+                <g>
+                  <line y1="3" x2="24" y2="3" stroke="black" stroke-width="2"/>
+                  <line y1="11" x2="24" y2="11" stroke="black" stroke-width="2"/>
+                  <line y1="19" x2="24" y2="19" stroke="black" stroke-width="2"/>
+                </g>
+              </symbol>
+            </svg>
+
+            <ul class="main-nav__list site-list site-list--close site-list--open" id="navList">
+              <li class="site-list__item">
                 <a class="site-list__link" href="index.html">
                   Главная
                 </a>
@@ -38,29 +51,29 @@
                 </a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="#">
+                <a class="site-list__link site-list__item--current" href="#">
                   Подбор программы
                 </a>
               </li>
             </ul>
-          </div>
         </nav>
       </div>
     </header>
 
   <main class="form-wrapper">
-    <section class="program-selection">
+    <section class="program-selection container">
       <div class="program-selection-container">
         <h1 class="program-selection__title">
           Подбор программы
         </h1>
         <p class="program-selection__subtitle">
-          Заполните анкету, и мы подберем программу питания для вашего кота
+          Заполните анкету, и мы подберем<br>программу питания для вашего кота
         </p>
       </div>
       <form class="program-selection__form form" method="post" action="https://echo.htmlacademy.ru">
         <div class="form__container">
 
+        <div class="form__wrapper-one">
           <fieldset class="form__fieldset">
             <legend class="visually-hidden">
               <h2 class="visually-hidden">
@@ -72,19 +85,19 @@
                 <label class="form__label" for="cat-name">
                   Имя:*
                 </label>
-                <input class="form__placeholder" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
+                <input class="form__placeholder" type="text" name="cat-name" id="cat-name" value="Барсик" placeholder="Введите имя кота" required>
               </div>
               <div class="form__data-container">
                 <label class="form__label" for="cat-weight">
-                  Вес:*
+                  Вес (кг):*
                 </label>
-                <input class="form__placeholder" type="text" name="cat-weight" id="cat-weight" placeholder="7" required>
+                <input class="form__placeholder" type="text" name="cat-weight" id="cat-weight" value="7" placeholder="Введите вес кота" required>
               </div>
               <div class="form__data-container">
                 <label class="form__label" for="cat-age">
                   Возраст (лет):
                 </label>
-                <input class="form__placeholder" type="text" name="cat-age" id="cat-age" placeholder="7">
+                <input class="form__placeholder" type="text" name="cat-age" id="cat-age" value="7" placeholder="Введите возраст">
               </div>
             </div>
           </fieldset>
@@ -97,29 +110,33 @@
             </legend>
             <ul class="form__list selection-button">
               <li class="selection-button__item">
-                <input class="selection-button__input" type="radio" name="weight-loss" value="weight-loss" id="weight-loss" checked>
-                <label class="selection-button__label" for="weight-loss">
+                <label class="selection-button__label selection-button--radio">
+                  <input class="visually-hidden selection-button__input" type="radio" name="selection-radio" value="weight-loss" checked>
+                  <span class="selection-button__span"></span>
                   Похудение
                 </label>
               </li>
               <li class="selection-button__item">
-                <input class="selection-button__input" type="radio" name="weight-gain" value="weight-gain" id="weight-gain">
-                <label class="selection-button__label" for="weight-gain">
+                <label class="selection-button__label selection-button--radio">
+                  <input class="visually-hidden selection-button__input" type="radio" name="selection-radio" value="weight-gain">
+                  <span class="selection-button__span"></span>
                   Набор массы
                 </label>
               </li>
               <li class="selection-button__item">
-                <input class="selection-button__input" type="radio" name="idk" value="idk" id="idk">
-                <label class="selection-button__label" for="idk">
+                <label class="selection-button__label selection-button--radio">
+                  <input class="visually-hidden selection-button__input" type="radio" name="selection-radio" value="idk">
+                  <span class="selection-button__span"></span>
                   Не знаю (Нужен ваш совет)
                 </label>
               </li>
             </ul>
           </fieldset>
+        </div>
 
           <fieldset class="form__fieldset">
             <legend class="form__legend">
-              <h2 class="form__title">
+              <h2 class="form__title form__title-one">
                 Контактные данные (владельца кота)
               </h2>
             </legend>
@@ -128,7 +145,7 @@
                 <label class="form__label" for="email">
                   E-mail:*
                 </label>
-                <input class="form__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+                <input class="form__input" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
                 <svg class="form__input-svg" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.50034 8.5V16.5H18.5041V8.5M1.50034 3.5H18.5041V5.5L10.0022 11.5L1.50034 5.5V3.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -137,7 +154,7 @@
                 <label class="form__label" for="telephone">
                   Телефон:*
                 </label>
-                <input class="form__input" type="tel" name="telephone" id="telephone" placeholder="8 (960) 900-60-90" required>
+                <input class="form__input" type="tel" name="telephone" id="telephone" value="8 (960) 900-60-90" required>
                 <svg class="form__input-svg" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.0022 10H18.5041M18.5041 10L16.0036 7.5M18.5041 10L16.0036 12.5M8.50191 2.5V7.5H5.50124V12.5H8.50191V17.5H6.00135C4.50102 17.5 3.50079 16.5 3.50079 15V5C3.50079 3.5 4.50102 2.5 6.00135 2.5H8.50191Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -147,7 +164,7 @@
 
           <fieldset class="form__fieldset form__fieldset--comment">
             <legend class="form__legend">
-              <h2 class="form__title-comment">
+              <h2 class="form__title form__title-two">
                 Комментарий
               </h2>
             </legend>
@@ -156,43 +173,49 @@
 
           <fieldset class="form__fieldset form__fieldset--extra">
             <legend class="form__legend">
-              <h2 class="form__title">
+              <h2 class="form__title form__title-three">
                 Дополнительно
               </h2>
             </legend>
             <ul class="form__list extra-button">
               <li class="extra-button__item">
                 <label class="extra-button__label">
-                  <input class="extra-button__input" type="checkbox" name="sweetener" checked>
-                  <span class="extra-button__span">Сахарозаменитель</span>
+                  <input class="visually-hidden extra-button__input" type="checkbox" name="sweetener" checked>
+                  <span class="extra-button__span"></span>
+                  Сахарозаменитель
                 </label>
               </li>
               <li class="extra-button__item">
                 <label class="extra-button__label">
-                  <input class="extra-button__input" type="checkbox" name="water">
-                  <span class="extra-button__span">Питьевая вода</span>
+                  <input class="visually-hidden extra-button__input" type="checkbox" name="water">
+                  <span class="extra-button__span"></span>
+                  Питьевая вода
                 </label>
               </li>
               <li class="extra-button__item">
                 <label class="extra-button__label">
-                  <input class="extra-button__input" type="checkbox" name="milk">
-                  <span class="extra-button__span">Молоко</span>
+                  <input class="visually-hidden extra-button__input" type="checkbox" name="milk">
+                  <span class="extra-button__span"></span>
+                  Молоко
                 </label>
               </li>
               <li class="extra-button__item">
                 <label class="extra-button__label">
-                  <input class="extra-button__input" type="checkbox" name="vitamins">
-                  <span class="extra-button__span">Витамины</span>
+                  <input class="visually-hidden extra-button__input" type="checkbox" name="vitamins">
+                  <span class="extra-button__span"></span>
+                  Витамины
                 </label>
               </li>
             </ul>
           </fieldset>
-          <button class="form__button button" type="submit">
-            Отправить заявку
-          </button>
-          <span class="form__required-fields">
-            * — Обязательные поля
-          </span>
+          <div class="form-button-span">
+            <button class="form__button button" type="submit">
+              Отправить заявку
+            </button>
+            <span class="form__required-fields">
+              * — Обязательные поля
+            </span>
+          </div>
         </div>
       </form>
     </section>
@@ -202,17 +225,22 @@
     <section class="adress-company">
       <div class="adress-company__container">
         <h2 class="adress-company__invite">
-          Приглашаем к сотрудничеству дилеров!
+          Приглашаем<br>к сотрудничеству дилеров!
         </h2>
         <address class="adress-company__adress">
-          ул. Большая Конюшенная, д. 19/8
-          Санкт-Петербург
+          <span class="adress-company__element1">ул. Большая<br>Конюшенная, д. 19/8</span>
+          <span class="adress-company__element2">Санкт-Петербург</span>
         </address>
       </div>
-      <div class="google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610323!2d30.320858717443855!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1690675487178!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <img src="img/map-img.jpg" width="1440" height="400" alt="Где карта, Билли?">
+      <div class="map" id="map">
+        <script src="https://api-maps.yandex.ru/2.1?apikey=856233f6-b4f7-43db-8848-b1d6f9396087&lang=ru_RU"></script>
+        <noscript>
+          <picture>
+            <source media="(min-width: 1220px)" srcset="img/map-desktop-img.jpg 1x, img/map-desktop-img@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet-img.jpg 1x, img/map-tablet-img@2x.jpg 2x">
+            <img class="map__image--nojs" src="img/map-mobile-img.jpg" srcset="img/map-mobile-img@2x.jpg" width="320" height="362" alt="Локация магазина на карте">
+          </picture>
+        </noscript>
       </div>
     </section>
 
@@ -266,5 +294,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
