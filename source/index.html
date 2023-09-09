@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Кэт энерджи</title>
+  <title>HTML Academy: Cat Energy</title>
+  <link rel="icon" type="image/png" sizes="152x152" href="img/favicon/favicon-big.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-medium.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-small.png">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
@@ -22,22 +25,15 @@
           <span class="main-header__text-logo">
             <img class="main-header__text-logo-img" src="img/logo-mobile-title.svg" width="101" height="18" alt="название Cat energy">
           </span>
-          <button class="main-header__burger-menu main-header__burger-menu--open" type="button" id="toggleButton">
-            <svg class="main-header__svg--open">
-              <use xlink:href="#nav-open"></use>
+          <button class="main-header__burger-menu" type="button" id="toggleButton">
+            <svg class="main-header__svg main-header__svg--open" width="24" height="24">
+              <use xlink:href="img/svg/sprite.svg#mobile-nav-button"></use>
+            </svg>
+            <svg class="main-header__svg main-header__svg--close" width="20" height="20">
+              <use xlink:href="img/svg/sprite.svg#mobile-nav-button-open"></use>
             </svg>
           </button>
         </div>
-
-          <svg style="display: none;">
-            <symbol id="nav-open" viewBox="0 0 24 24">
-              <g>
-                <line y1="3" x2="24" y2="3" stroke="black" stroke-width="2"/>
-                <line y1="11" x2="24" y2="11" stroke="black" stroke-width="2"/>
-                <line y1="19" x2="24" y2="19" stroke="black" stroke-width="2"/>
-              </g>
-            </symbol>
-          </svg>
 
           <ul class="main-nav__list site-list site-list--close site-list--open" id="navList">
             <li class="site-list__item site-list__item--current">
@@ -152,7 +148,7 @@
           </li>
           <li class="advantages__item">
             <span class="advantages__text">
-              Уже через месяц наслаждайтесь изменениями к лучшему<br>вашего питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему <br>вашего питомца!
             </span>
           </li>
         </ul>
@@ -168,33 +164,35 @@
           <p class="example__description">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <div class="example__container-elements">
-            <div class="example__kilos">
-              <h3 class="example__value-kilos">
-                5 кг
-              </h3>
-              <p class="example__text example__text--kilos">
-                Снижение веса
+          <div class="example__elements-wrapper">
+            <div class="example__container-elements">
+              <div class="example__kilos">
+                <h3 class="example__value-kilos">
+                  5 кг
+                </h3>
+                <p class="example__text example__text--kilos">
+                  Снижение веса
+                </p>
+              </div>
+              <div class="example__days">
+                <h3 class="example__value-days">
+                  60 дней
+                </h3>
+                <p class="example__text example__text--days">
+                  Затрачено времени
+                </p>
+              </div>
+            </div>
+            <div class="example__cost">
+              <p class="example__text-cost">
+                <span class="example__span-one">
+                  Затраты на питание:
+                </span>
+                <span class="example__span-two">
+                  15 000 руб.
+                </span>
               </p>
             </div>
-            <div class="example__days">
-              <h3 class="example__value-days">
-                60 дней
-              </h3>
-              <p class="example__text example__text-days">
-                Затрачено времени
-              </p>
-            </div>
-          </div>
-          <div class="example__cost">
-            <p class="example__text-cost">
-              <span class="example__span-one">
-                Затраты на питание:
-              </span>
-              <span class="example__span-two">
-                15 000 руб.
-              </span>
-            </p>
           </div>
         </div>
         <div class="example__section--two" data-container>
@@ -237,7 +235,7 @@
         <script src="https://api-maps.yandex.ru/2.1?apikey=856233f6-b4f7-43db-8848-b1d6f9396087&lang=ru_RU"></script>
         <noscript>
           <picture>
-            <source media="(min-width: 1220px)" srcset="img/map-desktop-img.jpg 1x, img/map-desktop-img@2x.jpg 2x">
+            <source media="(min-width: 1440px)" srcset="img/map-desktop-img.jpg 1x, img/map-desktop-img@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet-img.jpg 1x, img/map-tablet-img@2x.jpg 2x">
             <img class="map__image--nojs" src="img/map-mobile-img.jpg" srcset="img/map-mobile-img@2x.jpg" width="320" height="362" alt="Локация магазина на карте">
           </picture>

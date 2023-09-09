@@ -46,11 +46,11 @@
     border-top: none;
   }
 
-  &--current {
-    @media (min-width: $tablet) {
-      border-bottom: 2px solid $button-color;
-    }
-  }
+  // &--current {
+  //   @media (min-width: $tablet) {
+  //     border-bottom: 2px solid $button-color;
+  //   }
+  // }
 }
 
 .site-list__link {
@@ -99,5 +99,9 @@
     @media (min-width: $desktop) {
       color: $text-color2;
     }
+  }
+
+  &:last-child {
+    padding-right: 5px;
   }
 }

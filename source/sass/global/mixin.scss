@@ -166,3 +166,34 @@
     line-height: 30px;
   }
 }
+
+@mixin catalog-card {
+  font-size: 12px;
+  font-family: $lato;
+  font-weight: 400;
+  line-height: 16px;
+  color: $text-color;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@mixin catalog-title {
+  font-family: $oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $title-color;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

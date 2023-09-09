@@ -2,19 +2,20 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
+  background-color: $card-color;
 
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 56px 45px 57px;
+    padding: 57px 29px 57px 31px;
   }
 
   @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 67px 109px 70px;
+    padding: 71px 109px 70px;
   }
 }
 
@@ -25,7 +26,7 @@
   justify-content: center;
 
   @media (min-width: $tablet) {
-    padding: 0
+    padding: 0;
   }
 }
 

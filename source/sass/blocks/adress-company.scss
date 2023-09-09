@@ -13,17 +13,17 @@
   padding: 26px 20px;
   display: flex;
   align-items: center;
-  background-color: $card-color;
+  background-color: $bgcolor;
 
   @media (min-width: $tablet) {
-    padding: 60px 66px 60px 74px;
+    padding: 60px 70px;
     justify-content: space-between;
+    background-color: $bgcolor;
   }
 
   @media (min-width: $desktop) {
     position: absolute;
     z-index: 1;
-    background-color: $bgcolor;
     min-height: 199px;
     left: 110px;
     top: 95px;

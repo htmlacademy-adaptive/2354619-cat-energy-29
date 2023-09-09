@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Виктория Тозик](https://up.htmlacademy.ru/adaptive/29/user/2354619).
-* Наставник: [Кенан Агаев] (https://htmlacademy.ru/profile/kenakula).
+* Наставник: [Кенан Агаев](https://htmlacademy.ru/profile/kenakula).
 
 ---
 

@@ -1,14 +1,14 @@
 .catalog-text-container {
   border-top: 1px solid $catalog-border;
   border-bottom: 1px solid $catalog-border;
+
+  @media (min-width: $tablet) {
+    border: 0;
+  }
 }
 
 .catalog-product__title {
-  color: $title-color;
-  font-family: $oswald;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 36px;
+  @include hero-title;
   margin: 0 auto;
   margin-top: 27px;
   margin-bottom: 41px;

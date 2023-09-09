@@ -1,5 +1,5 @@
 .copyrights {
-  padding-top: 20px;
+  padding-top: 18px;
   padding-bottom: 40px;
   font-size: 16px;
   line-height: 20px;
@@ -32,6 +32,7 @@
 
 .copyrights__svg--html-academy {
   transition: color 0.3s ease;
+
   &:hover,
   &:focus {
     color: $button-color;
