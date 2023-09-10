@@ -1,8 +1,11 @@
+.main-footer {
+  background-color: $card-color;
+}
+
 .main-footer__wrapper {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  background-color: $card-color;
 
   @media (min-width: $tablet) {
     flex-direction: row;
