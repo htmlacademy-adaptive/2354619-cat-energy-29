@@ -9,11 +9,13 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
-    width: 440px;
+    // width: 440px;
+    max-width: 530px;
+    column-gap: 27px;
   }
 
   @media (min-width: $desktop) {
-    width: 478px;
+    // width: 478px;
   }
 
   &--close {
