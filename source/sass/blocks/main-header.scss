@@ -119,3 +119,11 @@
   opacity: 0;
   z-index: 0;
 }
+
+.main-header__nav-container--form {
+  border: 1px solid $border-line;
+
+  @media (min-width: 768px) {
+    border: none;
+  }
+}

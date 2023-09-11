@@ -11,7 +11,7 @@
       <div class="main-header__container">
         <nav class="main-nav main-nav--open">
 
-          <div class="main-header__nav-container">
+          <div class="main-header__nav-container main-header__nav-container--form">
             <a class="main-header__logo" href="#">
               <picture>
                 <source media="(min-width: 1220px)" srcset="img/logo-desktop.svg">
@@ -22,22 +22,15 @@
             <span class="main-header__text-logo">
               <img class="main-header__text-logo-img" src="img/logo-mobile-title.svg" width="101" height="18" alt="название Cat energy">
             </span>
-            <button class="main-header__burger-menu main-header__burger-menu--open" type="button" id="toggleButton">
-              <svg class="main-header__svg--open">
-                <use xlink:href="#nav-open"></use>
+            <button class="main-header__burger-menu" type="button" id="toggleButton">
+              <svg class="main-header__svg main-header__svg--open" width="24" height="24">
+                <use xlink:href="img/svg/sprite.svg#mobile-nav-button"></use>
+              </svg>
+              <svg class="main-header__svg main-header__svg--close" width="20" height="20">
+                <use xlink:href="img/svg/sprite.svg#mobile-nav-button-open"></use>
               </svg>
             </button>
           </div>
-
-            <svg style="display: none;">
-              <symbol id="nav-open" viewBox="0 0 24 24">
-                <g>
-                  <line y1="3" x2="24" y2="3" stroke="black" stroke-width="2"/>
-                  <line y1="11" x2="24" y2="11" stroke="black" stroke-width="2"/>
-                  <line y1="19" x2="24" y2="19" stroke="black" stroke-width="2"/>
-                </g>
-              </symbol>
-            </svg>
 
             <ul class="main-nav__list site-list site-list--close site-list--open" id="navList">
               <li class="site-list__item">
@@ -51,7 +44,7 @@
                 </a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link site-list__item--current" href="#">
+                <a class="site-list__link site-list__link--current" href="#">
                   Подбор программы
                 </a>
               </li>
@@ -61,7 +54,7 @@
     </header>
 
   <main class="form-wrapper">
-    <section class="program-selection container">
+    <section class="program-selection">
       <div class="program-selection-container">
         <h1 class="program-selection__title">
           Подбор программы
@@ -137,10 +130,12 @@
           <fieldset class="form__fieldset">
             <legend class="form__legend">
               <h2 class="form__title form__title-one">
+                <span class="form__span">
                 Контактные данные (владельца кота)
+                </span>
               </h2>
             </legend>
-            <div class="form__personal-container">
+            <div class="form__personal-container container">
               <div class="form__host-container">
                 <label class="form__label" for="email">
                   E-mail:*
@@ -165,56 +160,66 @@
           <fieldset class="form__fieldset form__fieldset--comment">
             <legend class="form__legend">
               <h2 class="form__title form__title-two">
+                <span class="form__span">
                 Комментарий
+                </span>
               </h2>
             </legend>
-            <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="form__textarea-container container">
+              <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--extra">
             <legend class="form__legend">
               <h2 class="form__title form__title-three">
+                <span class="form__span">
                 Дополнительно
+                </span>
               </h2>
             </legend>
-            <ul class="form__list extra-button">
-              <li class="extra-button__item">
-                <label class="extra-button__label">
-                  <input class="visually-hidden extra-button__input" type="checkbox" name="sweetener" checked>
-                  <span class="extra-button__span"></span>
-                  Сахарозаменитель
-                </label>
-              </li>
-              <li class="extra-button__item">
-                <label class="extra-button__label">
-                  <input class="visually-hidden extra-button__input" type="checkbox" name="water">
-                  <span class="extra-button__span"></span>
-                  Питьевая вода
-                </label>
-              </li>
-              <li class="extra-button__item">
-                <label class="extra-button__label">
-                  <input class="visually-hidden extra-button__input" type="checkbox" name="milk">
-                  <span class="extra-button__span"></span>
-                  Молоко
-                </label>
-              </li>
-              <li class="extra-button__item">
-                <label class="extra-button__label">
-                  <input class="visually-hidden extra-button__input" type="checkbox" name="vitamins">
-                  <span class="extra-button__span"></span>
-                  Витамины
-                </label>
-              </li>
-            </ul>
+            <div class="container">
+              <ul class="form__list extra-button">
+                <li class="extra-button__item">
+                  <label class="extra-button__label">
+                    <input class="visually-hidden extra-button__input" type="checkbox" name="sweetener" checked>
+                    <span class="extra-button__span"></span>
+                    Сахарозаменитель
+                  </label>
+                </li>
+                <li class="extra-button__item">
+                  <label class="extra-button__label">
+                    <input class="visually-hidden extra-button__input" type="checkbox" name="water">
+                    <span class="extra-button__span"></span>
+                    Питьевая вода
+                  </label>
+                </li>
+                <li class="extra-button__item">
+                  <label class="extra-button__label">
+                    <input class="visually-hidden extra-button__input" type="checkbox" name="milk">
+                    <span class="extra-button__span"></span>
+                    Молоко
+                  </label>
+                </li>
+                <li class="extra-button__item">
+                  <label class="extra-button__label">
+                    <input class="visually-hidden extra-button__input" type="checkbox" name="vitamins">
+                    <span class="extra-button__span"></span>
+                    Витамины
+                  </label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
-          <div class="form-button-span">
-            <button class="form__button button" type="submit">
-              Отправить заявку
-            </button>
-            <span class="form__required-fields">
-              * — Обязательные поля
-            </span>
+          <div class="container">
+            <div class="form-button-span">
+              <button class="form__button button" type="submit">
+                Отправить заявку
+              </button>
+              <span class="form__required-fields">
+                * — Обязательные поля
+              </span>
+            </div>
           </div>
         </div>
       </form>

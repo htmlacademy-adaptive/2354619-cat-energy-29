@@ -2,6 +2,7 @@
   display: flex;
   gap: 32px;
   margin: 0;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet) {
     gap: 42px;
@@ -42,7 +43,7 @@
 }
 
 .elements__index-description {
-  width: 60%;
+  width: 65%;
   transform: translateY(50%);
   margin: 0;
   margin-top: -5px;

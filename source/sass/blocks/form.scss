@@ -5,9 +5,12 @@
 .form__legend {
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .form__wrapper-one {
+  @include container;
+
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -24,7 +27,7 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 71px;
-    row-gap: 20px;
+    row-gap: 14px;
   }
 
   @media (min-width: $desktop) {
@@ -62,6 +65,18 @@
 
 .form__title {
   @include form-title;
+  @include green-line;
+}
+
+.form__span {
+  display: inline-block;
+  padding: 0 20px;
+  background-color: $bgcolor;
+  max-width: 230px;
+
+  @media (min-width: $tablet) {
+    max-width: max-content;
+  }
 }
 
 .form__title-one {
@@ -105,17 +120,17 @@
 }
 
 .form__personal-container {
-  padding: 35px 0 11px;
+  // padding: 35px 0 11px;
 
   @media (min-width: $tablet) {
-    padding: 75px 0 11px;
+    // padding: 75px 0 11px;
   }
 
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    padding: 39px 0 34px;
+    // padding: 39px 0 34px;
   }
 }
 
@@ -132,6 +147,7 @@
 
   @media (min-width: $desktop) {
     margin: 0;
+    width: 570px;
   }
 }
 
@@ -174,6 +190,7 @@
 
 .form__button {
   @include button-main;
+  @include button-state;
   padding: 10px 78px;
 
   @media (min-width: $tablet) {
@@ -219,4 +236,8 @@
     color: $text-color;
     opacity: 1;
   }
+}
+
+.form__textarea-container {
+  width: 100%;
 }

@@ -3,14 +3,10 @@
   line-height: 20px;
   position: relative;
 
-  // &--open {
-  //   display: block;
-  // }
-
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding-top: 24px;
   }
 

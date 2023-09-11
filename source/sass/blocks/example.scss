@@ -17,11 +17,11 @@
 
 .example__container {
   display: grid;
-  grid-template-rows: 1fr 62vh;
+  grid-template-rows: 1fr 0.87fr;
   padding-bottom: 44px;
 
   @media (min-width: $tablet) {
-    grid-template-rows: 1fr 128vh;
+    grid-template-rows: 1fr 1.18fr;
     padding-bottom: 100px;
   }
 
@@ -226,6 +226,7 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
+  max-height: 100%;
 
   @media (min-width: $tablet) {
     object-fit: cover;

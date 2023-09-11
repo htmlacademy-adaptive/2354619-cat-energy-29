@@ -67,7 +67,8 @@
     text-transform: uppercase;
     color: $title-color;
     line-height: 24px;
-    padding-bottom: 10px;
+    padding-top: 14px;
+    padding-bottom: 7px;
   }
 
   @media (min-width: $desktop) {
@@ -85,16 +86,13 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
-  &:focus {
-    opacity: 0.3;
-  }
-
   &:active {
-    border-bottom: 2px solid $text-color2;
+    opacity: 0.3;
   }
 
   &--main {
@@ -105,5 +103,11 @@
 
   &:last-child {
     padding-right: 5px;
+  }
+
+  &--current {
+    @media (min-width: $tablet) {
+      border-bottom: 2px solid $button-color;
+    }
   }
 }

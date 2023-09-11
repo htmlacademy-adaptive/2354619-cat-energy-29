@@ -30,13 +30,11 @@
 }
 
 .catalog-list__item {
-  // border-bottom: 1px solid $border-color;
-  // padding: 25px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
 
   @media (min-width: $tablet) {
     min-height: 511px;
+    grid-template-columns: 1fr 1fr;
     display: flex;
     flex-direction: column;
     padding: 0 37px;

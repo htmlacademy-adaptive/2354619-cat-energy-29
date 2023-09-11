@@ -36,3 +36,7 @@
   padding: 7px 44px;
   font-size: 16px;
 }
+
+.catalog-list__button {
+  @include button-state;
+}

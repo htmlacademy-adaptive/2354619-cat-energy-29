@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $desktop) {
-    column-gap: 104px;
+    justify-content: space-between;
     row-gap: 0;
   }
 }
@@ -22,15 +22,14 @@
 .extra-button__label {
   position: relative;
   display: block;
-  padding: 6px 0 5px 45px;
+  padding: 6px 50px 5px 50px;
   cursor: pointer;
-  min-width: 221px;
 
   // @media (min-width: $tablet) {
   //   min-width: 284px;
   // }
 
-  // @media (min-width: $tablet) {
+  // @media (min-width: $desktop) {
   //   min-width: 221px;
   // }
 }
