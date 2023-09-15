@@ -56,3 +56,11 @@ toggleButton.addEventListener("click", function () {
   isOpen = !isOpen;
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButton = document.querySelector('.main-header__burger-menu');
+  const navList = document.querySelector('.site-list--nojs');
+
+  if (navList) {
+    navList.classList.remove('site-list--nojs')
+  }
+});

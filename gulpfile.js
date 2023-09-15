@@ -4,7 +4,9 @@ import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
-
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
+import { stacksvg } from "gulp-stacksvg";
 // Styles
 
 export const styles = () => {
@@ -16,6 +18,19 @@ export const styles = () => {
     ]))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+export const stackSvg = () => {
+  return gulp.src('source/img/sprite-source/*.svg')
+    .pipe(svgo({
+      plugins: [
+        {
+          removeUnknownsAndDefaults: false
+        }
+      ]
+    }))
+    .pipe(stacksvg({ output: `sprite` }))
+    .pipe(gulp.dest('build/img'));
 }
 
 // Server
@@ -41,5 +56,7 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  styles, stacksvg, server, watcher
 );
+
+

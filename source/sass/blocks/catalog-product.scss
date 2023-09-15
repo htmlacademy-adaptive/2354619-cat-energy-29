@@ -9,7 +9,11 @@
 
 .catalog-product__title {
   @include hero-title;
-  margin: 0 auto;
-  margin-top: 27px;
-  margin-bottom: 41px;
+  margin: 0;
+  padding: 26px 23px 40px 0;
+  color: $title-color;
+
+  @media (min-width: $tablet) {
+    padding: 64px 30px 95px;
+  }
 }

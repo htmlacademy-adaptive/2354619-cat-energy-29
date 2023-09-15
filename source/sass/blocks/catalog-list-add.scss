@@ -1,24 +1,44 @@
 .catalog-list-add {
   list-style: none;
-  margin: 0;
-  padding: 0;
 
   &--value {
     text-align: right;
+
+    @media (min-width: $tablet) {
+      padding-left: 47px;
+    }
   }
 }
 
 .catalog-list-add__table {
   width: 100%;
   margin: 10px 0 12px;
+
+  @media (min-width: $tablet) {
+    width: auto;
+    max-width: 50%;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 17px;
+  }
 }
 
 .catalog-list-add__item {
+  padding-bottom: 18px;
   border-bottom: 1px solid $border-color;
-  padding: 25px 0;
 
   &:first-child {
     border-top: 1px solid $border-color;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -1px;
+    padding: 24px 37px 28px 38px;
+    border: 1px solid $border-color;
   }
 }
 
@@ -29,14 +49,32 @@
   text-transform: uppercase;
   color: $title-color;
   font-weight: 400;
-  margin: 13px 0;
+  margin: 13px 0 10px;
+
+  @media (min-width: $tablet) {
+    // margin-top: 5px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 26px;
+  }
 }
 
 .catalog-list-add__button {
-  padding: 7px 44px;
+  padding: 10px 44px;
   font-size: 16px;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .catalog-list__button {
   @include button-state;
+}
+
+.catalog-list-add-cinco {
+  @media (min-width: $tablet) {
+    padding-right: 10px;
+  }
 }

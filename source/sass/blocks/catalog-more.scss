@@ -1,39 +1,70 @@
 .catalog-more {
-  padding: 25px 20px;
-  font-family: $lato;
-  font-size: 12px;
-  line-height: 16px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  height: 100%;
 
-.catalog-more__plus {
-  position: relative;
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+  }
 }
 
 .catalog-more__title {
-  color: $title-color;
-  font-family: $oswald;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  margin: 0;
+  @include catalog-title;
   margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    max-width: 170px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
 }
 
 .catalog-more__subtitle {
-  margin: 0;
+  @include catalog-subtitle;
   margin-bottom: 21px;
+
+  @media (min-width: $tablet) {
+    max-width: 220px;
+  }
 }
 
 .catalog-more__button {
-  width: 280px;
+  max-width: 280px;
+  width: 100%;
   padding: 10px 0;
   text-align: center;
   background-color: $card-color;
   color: $text-color;
   font-size: 16px;
+
+  @media (min-width: $tablet) {
+    margin-top: 60px;
+  }
+}
+
+.catalog-more__icon {
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 25px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 48px;
+    margin-top: 49px;
+  }
+}
+
+.catalog-more__plus {
+  width: 30px;
+  height: 30px;
+
+  @media (min-width: $tablet) {
+    width: 60px;
+    height: 60px;
+  }
 }

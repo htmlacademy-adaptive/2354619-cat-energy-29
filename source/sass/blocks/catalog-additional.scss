@@ -5,10 +5,29 @@
 }
 
 .catalog-additional__title {
+  @include green-line;
   color: $title-color;
   font-family: $oswald;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
-  margin: 25px 0 36px;
+  margin: 25px 0 34px;
+
+  @media (min-width: $tablet) {
+    padding: 0 calc((100vw - 708px) / 2);
+    margin: 25px 0 80px;
+  }
+}
+
+.catalog-additional__span {
+  display: inline-block;
+  padding: 0 20px;
+  background-color: $bgcolor;
+  max-width: 280px;
+  line-height: 1;
+
+  @media (min-width: $tablet) {
+    max-width: max-content;
+    padding: 0 40px;
+  }
 }
