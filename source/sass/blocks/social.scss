@@ -19,6 +19,10 @@
   padding: 0;
   column-gap: 24px;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    margin-top: 8px;
+  }
 }
 
 .social__link {

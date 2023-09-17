@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Кэт энерджи</title>
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="title" content="HTML Academy: Cat Energy">
+  <title>HTML Academy: Cat Energy</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
     <header class="main-header">
@@ -14,13 +15,13 @@
           <div class="main-header__nav-container main-header__nav-container--form">
             <a class="main-header__logo" href="#">
               <picture>
-                <source media="(min-width: 1220px)" srcset="img/logo-desktop.svg">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="логотип Кэт энерджи">
+                <source media="(min-width: 1220px)" srcset="img/all-svg/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/all-svg/logo-tablet.svg">
+                <img class="main-header__logo-image" src="img/all-svg/logo-mobile.svg" width="33" height="38" alt="логотип Кэт энерджи">
               </picture>
             </a>
             <span class="main-header__text-logo">
-              <img class="main-header__text-logo-img" src="img/logo-mobile-title.svg" width="101" height="18" alt="название Cat energy">
+              <img class="main-header__text-logo-img" src="img/svg/sprite.svg#cat-energy" width="101" height="18" alt="название Cat energy">
             </span>
             <button class="main-header__burger-menu" type="button" id="toggleButton">
               <svg class="main-header__svg main-header__svg--open" width="24" height="24">
@@ -141,8 +142,8 @@
                   E-mail:*
                 </label>
                 <input class="form__input" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
-                <svg class="form__input-svg" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.50034 8.5V16.5H18.5041V8.5M1.50034 3.5H18.5041V5.5L10.0022 11.5L1.50034 5.5V3.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg class="form__svg" width="21" height="20">
+                  <use xlink:href="img/svg/sprite.svg#email-stroke"></use>
                 </svg>
               </div>
               <div class="form__host-container">
@@ -150,8 +151,8 @@
                   Телефон:*
                 </label>
                 <input class="form__input" type="tel" name="telephone" id="telephone" value="8 (960) 900-60-90" required>
-                <svg class="form__input-svg" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.0022 10H18.5041M18.5041 10L16.0036 7.5M18.5041 10L16.0036 12.5M8.50191 2.5V7.5H5.50124V12.5H8.50191V17.5H6.00135C4.50102 17.5 3.50079 16.5 3.50079 15V5C3.50079 3.5 4.50102 2.5 6.00135 2.5H8.50191Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg class="form__svg" width="21" height="20">
+                  <use xlink:href="img/svg/sprite.svg#phone-stroke"></use>
                 </svg>
               </div>
             </div>

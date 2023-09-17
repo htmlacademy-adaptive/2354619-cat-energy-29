@@ -69,4 +69,8 @@
 
 .adress-company__pages {
   background-color: $card-color;
+
+  @media (min-width: $desktop) {
+    background-color: $bgcolor;
+  }
 }

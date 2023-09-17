@@ -241,7 +241,7 @@
     background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $button-color 22px, $button-color 25px, transparent 25px, transparent 100%);
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     margin: 46px 0 60px;
     padding: 0 calc((100vw - 1300px) / 2);
   }

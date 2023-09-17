@@ -108,19 +108,19 @@
   }
 
   &:nth-child(4n + 1)::before {
-    background-image: url("../img/advantages-card1.svg");
+    background-image: url("../img/all-svg/advantages-card1.svg");
   }
 
   &:nth-child(4n + 2)::before {
-    background-image: url("../img/advantages-card2.svg");
+    background-image: url("../img/all-svg/advantages-card2.svg");
   }
 
   &:nth-child(4n + 3)::before {
-    background-image: url("../img/advantages-card3.svg");
+    background-image: url("../img/all-svg/advantages-card3.svg");
   }
 
   &:nth-child(4n + 4)::before {
-    background-image: url("../img/advantages-card4.svg");
+    background-image: url("../img/all-svg/advantages-card4.svg");
   }
 
   &:first-child::after {

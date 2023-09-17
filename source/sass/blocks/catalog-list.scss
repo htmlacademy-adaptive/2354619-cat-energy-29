@@ -20,12 +20,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
     grid-column-gap: 80px;
-    grid-row-gap: 63px;
+    grid-row-gap: 73px;
+    padding: 0 110px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
 .catalog-list__item {
   display: grid;
+  padding: 0 20px;
   padding-bottom: 25px;
   border-bottom: 1px solid $catalog-border;
 
@@ -39,9 +43,9 @@
     background: linear-gradient(to top, $card-color 86%, $bgcolor 30%);
   }
 
-  @media (min-width: $desktop) {
-    padding: 10px 38px 40px;
-  }
+  // @media (min-width: $desktop) {
+  //   padding: 0;
+  // }
 
   &:last-child {
     @media (min-width: $tablet) {
@@ -51,12 +55,16 @@
       min-height: 429px;
       border: 2px solid $card-color;
     }
+
+    @media (min-width: $desktop) {
+      margin-top: 70px;
+      height: calc(100% - 78px);
+    }
   }
 }
 
 .catalog-list__wrapper {
   display: flex;
-  padding: 0 20px;
 
   @media (min-width: $tablet) {
     flex-direction: column;
@@ -76,9 +84,9 @@
   }
 
   @media (min-width: $desktop) {
-    height: 242px;
-    margin-top: 0;
-    margin-bottom: 3px;
+    height: 210px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -89,6 +97,10 @@
   width: 100%;
   padding-top: 21px;
   padding-bottom: 20px;
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
 
 .catalog-list__title {
@@ -119,7 +131,7 @@
   }
 
   @media (min-width: $desktop) {
-    max-width: 500px;
+    margin: 12px auto 0;
   }
 }
 
@@ -140,7 +152,6 @@
   font-size: 16px;
   line-height: 20px;
   padding: 10px;
-  max-width: 280px;
   margin: 0 auto;
   width: 100%;
 
@@ -160,6 +171,11 @@
     margin-bottom: 12px;
     margin-top: 16px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 33px;
+    margin-top: 15px;
+  }
 }
 
 .catalog-list__table td {
@@ -167,6 +183,12 @@
     border-bottom: 1px solid $border-color;
     padding-top: 4px;
     padding-bottom: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 6.5px;
+    padding-bottom: 7px;
+    padding-right: 2px;
   }
 }
 
@@ -176,18 +198,17 @@
   width: 100%;
   height: 100%;
 
-  // @media (min-width: $tablet) {
-  //   width: 161px;
-  //   height: 172px;
-  // }
+  &--big {
+    @media (min-width: $desktop) {
+      width: 172px;
+      height: 196px;
+    }
+  }
+
+  &--small {
+    @media (min-width: $desktop) {
+      width: 161px;
+      height: 172px;
+    }
+  }
 }
-
-// .catalog-list__img--big {
-//   width: 84px;
-//   height: 100px;
-
-//   @media (min-width: $tablet) {
-//     width: 168px;
-//     height: 206px;
-//   }
-// }

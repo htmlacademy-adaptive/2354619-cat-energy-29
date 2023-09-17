@@ -7,6 +7,33 @@
     @media (min-width: $tablet) {
       padding-left: 47px;
     }
+
+    @media (min-width: $desktop) {
+      padding: 0;
+    }
+  }
+
+  &--property {
+    @media (min-width: $desktop) {
+      width: 241px;
+    }
+  }
+
+  &--five {
+    @media (min-width: $tablet) {
+      padding-right: 10px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 234px;
+    }
+  }
+
+  &--fifty {
+    @media (min-width: $desktop) {
+      width: 50px;
+      text-align: center;
+    }
   }
 }
 
@@ -19,8 +46,12 @@
     max-width: 50%;
     font-size: 16px;
     line-height: 20px;
+    margin: 0 0 19px;
+  }
+
+  @media (min-width: $desktop) {
     margin: 0;
-    margin-bottom: 17px;
+    padding-top: 4px;
   }
 }
 
@@ -40,6 +71,18 @@
     padding: 24px 37px 28px 38px;
     border: 1px solid $border-color;
   }
+
+  @media (min-width: $desktop) {
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 16px 0;
+    border: 0;
+    border-top: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: 1px solid $border-color;
+    }
+  }
 }
 
 .catalog-list-add__subtitle {
@@ -52,29 +95,36 @@
   margin: 13px 0 10px;
 
   @media (min-width: $tablet) {
-    // margin-top: 5px;
     font-size: 20px;
     line-height: 20px;
     margin: 0;
     margin-bottom: 26px;
   }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    margin-right: 80px;
+    width: 204px;
+  }
 }
 
 .catalog-list-add__button {
+  @include button-state;
+
   padding: 10px 44px;
   font-size: 16px;
 
   @media (min-width: $tablet) {
     width: 100%;
   }
+
+  @media (min-width: $desktop) {
+    padding: 10px 91px;
+    width: auto;
+    max-width: 250px;
+  }
 }
 
 .catalog-list__button {
   @include button-state;
-}
-
-.catalog-list-add-cinco {
-  @media (min-width: $tablet) {
-    padding-right: 10px;
-  }
 }

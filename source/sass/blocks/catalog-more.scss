@@ -18,7 +18,11 @@
   @media (min-width: $tablet) {
     max-width: 170px;
     margin: 0 auto;
-    margin-bottom: 24px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 26px;
   }
 }
 
@@ -39,9 +43,20 @@
   background-color: $card-color;
   color: $text-color;
   font-size: 16px;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     margin-top: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 70px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $catalog-border;
   }
 }
 
@@ -54,7 +69,7 @@
   margin-top: 25px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 48px;
+    margin-bottom: 36px;
     margin-top: 49px;
   }
 }
@@ -62,9 +77,17 @@
 .catalog-more__plus {
   width: 30px;
   height: 30px;
+  stroke-width: 3px;
+  color: $plus;
+  transition: color 0.3s ease;
 
   @media (min-width: $tablet) {
     width: 60px;
     height: 60px;
+    stroke-width: 2px;
+  }
+
+  &:hover {
+    color: $button-color;
   }
 }
