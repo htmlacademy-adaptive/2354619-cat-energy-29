@@ -1,6 +1,6 @@
 .social {
   margin: 0;
-  padding: 20px;
+  padding: 17px;
   border-top: 1px solid $border-line;
   border-bottom: 1px solid $border-line;
 
@@ -18,6 +18,11 @@
   margin: 0;
   padding: 0;
   column-gap: 24px;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    margin-top: 8px;
+  }
 }
 
 .social__link {

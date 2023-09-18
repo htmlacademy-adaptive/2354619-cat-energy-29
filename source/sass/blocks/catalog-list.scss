@@ -1,50 +1,138 @@
 .catalog-list {
-  display: flex;
-  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
+    grid-column-gap: 60px;
+    grid-row-gap: 71px;
+    margin: 0;
+    margin-bottom: 70px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    grid-column-gap: 80px;
+    grid-row-gap: 73px;
+    padding: 0 110px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .catalog-list__item {
-  border-bottom: 1px solid $border-color;
-  padding: 25px 0;
+  display: grid;
+  padding: 0 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $catalog-border;
+
+  @media (min-width: $tablet) {
+    min-height: 500px;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    padding: 0 37px;
+    margin: 0;
+    background: linear-gradient(to top, $card-color 86%, $bgcolor 30%);
+  }
+
+  // @media (min-width: $desktop) {
+  //   padding: 0;
+  // }
+
+  &:last-child {
+    @media (min-width: $tablet) {
+      background: transparent;
+      height: calc(100% - 81px);
+      margin-top: 71px;
+      min-height: 429px;
+      border: 2px solid $card-color;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 70px;
+      height: calc(100% - 78px);
+    }
+  }
 }
 
 .catalog-list__wrapper {
   display: flex;
-  padding: 11px 20px 14px;
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 .catalog-list__img-container {
   display: flex;
   justify-content: center;
-  width: 50%;
   align-items: center;
+  width: 100%;
+  padding-top: 4px;
+
+  @media (min-width: $tablet) {
+    height: 204px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 210px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .catalog-list__card {
-  font-size: 12px;
-  line-height: 16px;
-  font-family: $lato;
+  @include catalog-card;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
+  padding-top: 21px;
+  padding-bottom: 20px;
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
 
 .catalog-list__title {
   text-decoration: none;
-  color: $title-color;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  width: 120px;
-  height: auto;
+  display: block;
+
+  @media (min-width: $tablet) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: center;
+  }
 }
 
 .catalog-list__product-title {
-  margin: 0;
+  @include catalog-title;
+  display: block;
+  width: 80px;
+  margin: 0 0 14px;
+
+  @media (min-width: $tablet) {
+    text-align: center;
+    max-width: 150px;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 12px auto 0;
+  }
 }
 
 .catalog-list__feature {
@@ -61,8 +149,66 @@
 
 
 .catalog-list__button {
-  width: 280px;
-  padding: 10px 0;
-  margin: 0 20px;
   font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    padding: 10px 94px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 10px 53px;
+  }
+}
+
+.catalog-list__table {
+  border-collapse: collapse;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 12px;
+    margin-top: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 33px;
+    margin-top: 15px;
+  }
+}
+
+.catalog-list__table td {
+  @media (min-width: $tablet) {
+    border-bottom: 1px solid $border-color;
+    padding-top: 4px;
+    padding-bottom: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 6.5px;
+    padding-bottom: 7px;
+    padding-right: 2px;
+  }
+}
+
+.catalog-list__img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+
+  &--big {
+    @media (min-width: $desktop) {
+      width: 172px;
+      height: 196px;
+    }
+  }
+
+  &--small {
+    @media (min-width: $desktop) {
+      width: 161px;
+      height: 172px;
+    }
+  }
 }

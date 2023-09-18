@@ -1,32 +1,35 @@
 .example {
   background-color: $example-color;
   padding-top: 25px;
+  margin: 0;
 
   @media (min-width: $tablet) {
-    background-image: linear-gradient($text-color2 140px, $card-color 140px);
+    background-image: linear-gradient($bgcolor 618px, $example-color 140px);
     font-size: 16px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop) {
-    background-image: linear-gradient($text-color2 162px, $card-color 162px);
+    background-image: linear-gradient($text-color2 157px, $card-color 157px);
+    padding: 0;
   }
 }
 
 .example__container {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 0.87fr;
 
   @media (min-width: $tablet) {
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1.18fr;
+    padding-bottom: 100px;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 43px;
     grid-template-columns: 1fr 1fr;
     column-gap: 100px;
     min-height: 600px;
     grid-template-rows: 1fr;
+    padding-bottom: 73px;
   }
 }
 
@@ -43,21 +46,22 @@
   margin-bottom: 40px;
 
   @media (min-width: $tablet) {
+    margin-top: 18px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: $desktop) {
-    height: 138px;
-    margin-bottom: 70px;
+    margin-bottom: 147px;
   }
 }
 
 .example__description {
   @include all-content-subtitle;
 
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 50px;
+    margin-bottom: 57px;
   }
 
   @media (min-width: $desktop) {
@@ -67,18 +71,23 @@
 
 .example__container-elements {
   display: flex;
-  column-gap: 32px;
+  gap: 32px;
   flex-wrap: wrap;
+  justify-content: center;
 
   @media (min-width: $tablet) {
     column-gap: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    justify-content: start;
   }
 }
 
 .example__kilos,
 .example__days {
   width: 124px;
-  min-height: 70px;
+  height: 56px;
   border: 1px solid $border-color;
   font-size: 12px;
   line-height: 12px;
@@ -99,7 +108,7 @@
   text-align: center;
   color: $title-color;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 12px;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
@@ -109,23 +118,25 @@
     font-size: 30px;
     line-height: 37px;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 17px;
+  }
 }
 
 .example__text {
   text-align: center;
   font-family: $lato;
   margin: 0 auto;
-  position: absolute;
-  bottom: -14px;
-  right: 0;
-  left: 0;
-  width: 77px;
+  transform: translate(0%, 40%);
+  width: 80px;
   background-color: $example-color;
   text-transform: lowercase;
 
   @media (min-width: $tablet) {
-    width: 143px;
-    background-color: $text-color2;
+    width: 110px;
+    background-color: $bgcolor;
+    transform: translate(0%, 70%);
   }
 
   @media (min-width: $desktop) {
@@ -133,16 +144,19 @@
     bottom: -7px;
   }
 
-  &--kilos {
+  &--days {
+    width: 90px;
+
     @media (min-width: $tablet) {
-      width: 115px;
+      width: 140px;
     }
   }
 }
 
 .example__cost {
-  // margin-top: 34px;
-  // margin-bottom: 20px;
+  padding-top: 33px;
+  display: flex;
+  justify-content: center;
   color: $title-color;
   text-transform: uppercase;
   line-height: 20px;
@@ -150,19 +164,34 @@
 
   @media (min-width: $tablet) {
     font-size: 20px;
+    flex-direction: column;
+    text-align: right;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 
 .example__text-cost {
   display: flex;
+  margin: 0;
+  padding: 0;
+  column-gap: 2px;
 
   @media (min-width: $tablet) {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
   }
 
   @media (min-width: $desktop) {
     column-gap: 65px;
     margin-top: 61px;
+    flex-direction: row;
   }
 }
 
@@ -181,7 +210,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 5px;
+    margin-top: 20px;
     height: 512px;
     grid-area: 1/2/3/2;
     grid-template-columns: 50% 50%;
@@ -196,6 +225,7 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
+  max-height: 100%;
 
   @media (min-width: $tablet) {
     object-fit: cover;
@@ -216,23 +246,13 @@
   }
 }
 
-// .example__slider-range {
-//   position: relative;
-//   appearance: none;
-//   background-color: transparent;
-//   width: calc(100% + 40px);
-//   height: 100%;
-//   margin-left: -20px;
-//   outline: none;
-// }
-
 .example__cat-img {
   width: 100%;
   height: 100%;
 }
 
 .example__button-slider {
-  width: 4px;
+  width: 3px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -242,8 +262,13 @@
   padding: 0;
   border: none;
   border-radius: 2px;
-  cursor: pointer;
+  cursor: col-resize;
   transition: background-color 0.5s ease;
+  transform: translateX(-2px);
+
+  @media (min-width: $desktop) {
+    width: 4px;
+  }
 
   &:hover {
     background-color: $button-color;
@@ -269,4 +294,21 @@
 
 .example__button-slider:active .example__trumb-slider {
   color: $slider-pressed;
+}
+
+.example__elements-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    padding: 0;
+  }
 }

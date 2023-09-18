@@ -2,16 +2,11 @@
   font-size: 20px;
   line-height: 20px;
   position: relative;
-  padding-top: 12px;
-
-  // &--open {
-  //   display: block;
-  // }
 
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding-top: 24px;
   }
 

@@ -1,4 +1,4 @@
-.container {
+@mixin container {
   padding: 0 20px;
 
   @media screen and (min-width: $tablet) {
@@ -164,5 +164,99 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+@mixin catalog-card {
+  font-size: 12px;
+  font-family: $lato;
+  font-weight: 400;
+  line-height: 16px;
+  color: $text-color;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@mixin catalog-title {
+  font-family: $oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $title-color;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@mixin catalog-subtitle {
+  font-family: $lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@mixin button-state {
+  &:hover,
+  &:focus {
+    background-color: $btn-hover;
+    color: $text-color2;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $btn-hover;
+    color: $btn-color;
+  }
+}
+
+@mixin green-line {
+  position: relative;
+  margin: 30px 0 33px;
+  line-height: 1;
+  font-size: 24px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 13px, $button-color 13px, $button-color 16px, transparent 16px, transparent 100%);
+
+  @media (min-width: $tablet) {
+    margin: 62px 0 75px;
+    padding: 0 calc((100vw - 708px) / 2);
+    font-size: 36px;
+    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $button-color 22px, $button-color 25px, transparent 25px, transparent 100%);
+  }
+
+  @media (min-width: $desktop) {
+    margin: 46px 0 60px;
+    padding: 0 calc((100vw - 1300px) / 2);
+  }
+}
+
+@mixin form {
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    padding: 0 75px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    padding: 0 110px;
   }
 }

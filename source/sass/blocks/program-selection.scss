@@ -1,25 +1,13 @@
-.program-selection {
-  @media (min-width: $tablet) {
-    padding-left: 74px;
-    padding-right: 66px;
-  }
-
-  @media (min-width: $desktop) {
-    padding: 0 110px;
-  }
-}
-
 .program-selection__title {
   @include all-content-title;
-  // text-transform: initial;
-  margin: 38px 0 36px;
+  margin: 24px 0 36px;
 
   @media (min-width: $tablet) {
     margin: 64px 0 54px;
   }
 
   @media (min-width: $desktop) {
-    margin: 70px 0 54px;
+    margin: 66px 0 54px;
   }
 }
 
@@ -36,4 +24,8 @@
   @media (min-width: $desktop) {
     margin-bottom: 67px;
   }
+}
+
+.program-selection-container {
+  @include form;
 }

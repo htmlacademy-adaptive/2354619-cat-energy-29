@@ -14,13 +14,13 @@ function init () {
     iconImageOffset: [-40, -100]
   });
 
-  map.controls.remove('geolocationControl'); // удаляем геолокацию
-  map.controls.remove('searchControl'); // удаляем поиск
-  map.controls.remove('trafficControl'); // удаляем контроль трафика
-  map.controls.remove('typeSelector'); // удаляем тип
-  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-  map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-  map.controls.remove('rulerControl'); // удаляем контрол правил
+  map.controls.remove('geolocationControl');
+  map.controls.remove('searchControl');
+  map.controls.remove('trafficControl');
+  map.controls.remove('typeSelector');
+  map.controls.remove('fullscreenControl');
+  map.controls.remove('zoomControl');
+  map.controls.remove('rulerControl');
 
   map.geoObjects.add(placemark);
 }
@@ -36,4 +36,33 @@ document.addEventListener("DOMContentLoaded", function() {
   toggleButton.addEventListener("click", function() {
     navList.classList.toggle("site-list--close");
   });
+});
+
+// Кнопка меню навигации
+
+const toggleButton = document.getElementById("toggleButton");
+const openIcon = document.querySelector(".main-header__svg--open");
+const closeIcon = document.querySelector(".main-header__svg--close");
+let isOpen = false;
+
+toggleButton.addEventListener("click", function () {
+  if (isOpen) {
+    openIcon.style.opacity = 1;
+    closeIcon.style.opacity = 0;
+  } else {
+    openIcon.style.opacity = 0;
+    closeIcon.style.opacity = 1;
+  }
+  isOpen = !isOpen;
+});
+
+// Открытое меню при отключенном JS
+
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButton = document.querySelector('.main-header__burger-menu');
+  const navList = document.querySelector('.site-list--nojs');
+
+  if (navList) {
+    navList.classList.remove('site-list--nojs')
+  }
 });

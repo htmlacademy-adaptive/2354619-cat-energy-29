@@ -44,8 +44,7 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: start;
+    align-items: flex-start;
     font-size: 14px;
     line-height: 14px;
   }
@@ -53,14 +52,13 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 20px;
-    margin-top: 64px;
+    margin-top: 37px;
     padding-bottom: 526px;
   }
 
   @media (min-width: $desktop) {
     padding: 0 79px;
     row-gap: 38px;
-    height: 570px;
     margin: 0;
   }
 
@@ -109,16 +107,17 @@
   margin: 0 auto 25px;
   padding-top: 27px;
   order: 1;
+  max-width: 500px;
 
 
   @media (min-width: $tablet) {
     margin-bottom: 42px;
-    margin-left: 92px;
+    margin-left: 90px;
   }
 
   @media (min-width: $desktop) {
     margin: 0;
-    margin-top: 104px;
+    margin-top: 77px;
   }
 }
 
@@ -130,7 +129,7 @@
   @media (min-width: $tablet) {
     width: 420px;
     margin-bottom: 49px;
-    margin-left: 92px;
+    margin-left: 89px;
   }
 
   @media (min-width: $desktop) {
@@ -140,6 +139,7 @@
 
 .main-hero__picture {
   order: 4;
+  padding-top: 20px;
 
   @media (min-width: $tablet) {
     margin: 0;
@@ -148,56 +148,55 @@
     bottom: 0;
     top: auto;
     left: 30px;
+    padding: 0;
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: $desktop) {
     margin: 0;
-    transform: translate(-20%, 4%);
-    position: inherit;
+    left: calc(30% - 8px);
+    top: calc(6% - 2px);
   }
 }
 
 .main-hero__image {
   display: block;
   margin: 0 auto;
-  width: 280px;
+  width: 300px;
   height: 270px;
+  transform: translate(-3%, 3%);
 
   @media (min-width: $tablet) {
     width: 709px;
     height: 609px;
+    transform: translate(-4%, 0%);
   }
 
   @media (min-width: $desktop) {
     width: 552px;
     height: 499px;
+    transform: translate(2%, 0%);
   }
 }
 
 .main-hero__hero-button {
   @include button-main;
+  @include button-state;
 
   margin: 0 20px;
   order: 3;
+  margin-top: 12px;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet) {
     margin: 0;
-    margin-left: 92px;
+    margin-left: 90px;
     z-index: 2;
   }
 
   @media (min-width: $desktop) {
     margin: 0;
     margin-top: 15px;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $btn-hover;
-  }
-
-  &:active {
-    background-color: $btn-hover;
-    color: $btn-color;
   }
 }

@@ -1,15 +1,25 @@
 .catalog-text-container {
   border-top: 1px solid $catalog-border;
   border-bottom: 1px solid $catalog-border;
+
+  @media (min-width: $tablet) {
+    border: 0;
+  }
 }
 
 .catalog-product__title {
+  @include hero-title;
+  margin: 0;
+  padding: 26px 23px 40px 0;
   color: $title-color;
-  font-family: $oswald;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 36px;
-  margin: 0 auto;
-  margin-top: 27px;
-  margin-bottom: 41px;
+
+  @media (min-width: $tablet) {
+    padding: 64px 30px 95px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 66px 110px 95px;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
 }
