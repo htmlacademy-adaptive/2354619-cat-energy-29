@@ -246,3 +246,17 @@
     padding: 0 calc((100vw - 1300px) / 2);
   }
 }
+
+@mixin form {
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    padding: 0 75px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    padding: 0 110px;
+  }
+}

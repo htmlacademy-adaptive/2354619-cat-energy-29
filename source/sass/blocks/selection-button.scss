@@ -1,9 +1,7 @@
 .selection-button {
   list-style: none;
   margin: 0;
-  padding: 22px 0;
-  border-top: 1px solid $border-line;
-  border-bottom: 1px solid $border-line;
+  padding: 21px 0 20px;
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -54,8 +52,8 @@
   left: 50%;
   top: 50%;
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   background-color: $button-color;
   border-radius: 50%;
   transform: translate(-50%, -50%);

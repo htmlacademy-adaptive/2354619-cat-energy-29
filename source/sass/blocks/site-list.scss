@@ -102,7 +102,13 @@
   }
 
   &:last-child {
-    padding-right: 5px;
+    @media (min-width: $tablet) {
+      padding-right: 6px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-right: 5px;
+    }
   }
 
   &--current {
@@ -113,5 +119,5 @@
 }
 
 .site-list--nojs {
-  display: block;
+  display: flex;
 }

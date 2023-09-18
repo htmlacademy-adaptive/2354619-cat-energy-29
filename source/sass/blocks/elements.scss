@@ -1,15 +1,15 @@
-.elements {
+.elements-result {
   display: flex;
-  gap: 32px;
+  column-gap: 32px;
   margin: 0;
   flex-wrap: wrap;
 
   @media (min-width: $tablet) {
-    gap: 42px;
+    column-gap: 42px;
   }
 }
 
-.elements__wrapper {
+.elements-result__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -19,6 +19,7 @@
   margin: auto;
   border: 1px solid $border-color;
   border-radius: 3px;
+  width: 124px;
 
   @media (min-width: $tablet) {
     margin: 0;
@@ -26,7 +27,7 @@
   }
 }
 
-.elements__index-number {
+.elements-result__index-number {
   font-family: $oswald;
   color: $title-color;
   text-align: center;
@@ -41,7 +42,7 @@
   }
 }
 
-.elements__index-description {
+.elements-result__index-description {
   width: 65%;
   transform: translateY(50%);
   margin: 0;

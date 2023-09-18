@@ -18,7 +18,6 @@
 .example__container {
   display: grid;
   grid-template-rows: 1fr 0.87fr;
-  padding-bottom: 44px;
 
   @media (min-width: $tablet) {
     grid-template-rows: 1fr 1.18fr;

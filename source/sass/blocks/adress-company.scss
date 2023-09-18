@@ -70,6 +70,10 @@
 .adress-company__pages {
   background-color: $card-color;
 
+  @media (min-width: $tablet) {
+    padding: 60px 66px 60px 74px;
+  }
+
   @media (min-width: $desktop) {
     background-color: $bgcolor;
   }

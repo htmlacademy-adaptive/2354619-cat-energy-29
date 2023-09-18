@@ -1,6 +1,5 @@
 .program-selection__title {
   @include all-content-title;
-  // text-transform: initial;
   margin: 24px 0 36px;
 
   @media (min-width: $tablet) {
@@ -8,7 +7,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 70px 0 54px;
+    margin: 66px 0 54px;
   }
 }
 
@@ -28,5 +27,5 @@
 }
 
 .program-selection-container {
-  @include container;
+  @include form;
 }
