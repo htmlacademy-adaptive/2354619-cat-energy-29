@@ -126,14 +126,24 @@
   top: 0;
   left: 0;
   transition: opacity 0.3s ease-in-out;
+
+  &--open {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &--close {
+    opacity: 0;
+    z-index: 0;
+  }
 }
 
-.main-header__svg--open {
+.main-header__svg2--nojs {
+  display: block;
   opacity: 1;
   z-index: 1;
 }
 
-.main-header__svg--close {
-  opacity: 0;
-  z-index: 0;
+.main-header__svg1--nojs {
+  display: none;
 }

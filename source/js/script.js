@@ -66,3 +66,18 @@ document.addEventListener("DOMContentLoaded", function() {
     navList.classList.remove('site-list--nojs')
   }
 });
+
+// Кнопка при отключенном JS
+
+document.addEventListener("DOMContentLoaded", function() {
+  const ButtonNoJs = document.querySelector('.main-header__svg2--nojs');
+  const ButtonHidden = document.querySelector('.main-header__svg1--nojs');
+
+  if (ButtonNoJs) {
+    ButtonNoJs.classList.remove('main-header__svg2--nojs')
+  }
+
+  if (ButtonHidden) {
+    ButtonHidden.classList.remove('main-header__svg1--nojs')
+  }
+});
