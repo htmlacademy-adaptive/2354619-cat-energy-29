@@ -28,6 +28,19 @@
   @media (min-width: $tablet) {
     padding: 5px 0 5px 60px;
   }
+
+  &:hover {
+    border-color: $border-color;
+  }
+
+  &:focus {
+    outline: 2px solid $text-color;
+    border: none;
+  }
+
+  &:disabled {
+    border-color: $error;
+  }
 }
 
 .selection-button__span {
@@ -37,12 +50,23 @@
   top: 0;
   width: 30px;
   height: 30px;
-  border: 1px solid $form-contacts-border;
+  border: 1px solid $border-color;
   border-radius: 50%;
 
   @media (min-width: $tablet) {
     width: 40px;
     height: 40px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $border-radio;
+  }
+
+  &:disabled {
+    border: 1px solid $border-radio;
+    opacity: 0.3;
   }
 }
 

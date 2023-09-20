@@ -1,12 +1,3 @@
-.catalog-text-container {
-  border-top: 1px solid $catalog-border;
-  border-bottom: 1px solid $catalog-border;
-
-  @media (min-width: $tablet) {
-    border: 0;
-  }
-}
-
 .catalog-product__title {
   @include hero-title;
   margin: 0;

@@ -34,17 +34,19 @@
   }
 }
 
-.main-footer__svg--cat-energy {
+.main-footer__svg {
   display: block;
   color: $cat-energy;
   transition: color 0.3s ease;
 
-  &:hover,
-  &:focus {
-    color: $button-color;
-  }
+  &--cat-energy {
+    &:hover,
+    &:focus {
+      color: $cat-energy-hover;
+    }
 
-  &:active {
-    opacity: 0.3;
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

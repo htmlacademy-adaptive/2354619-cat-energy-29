@@ -21,28 +21,18 @@
     column-gap: 23px;
   }
 
+  &:hover,
+  &:focus {
+    color: $button-color;
+  }
+
   &:active {
+    color: $button-color;
     opacity: 0.3;
   }
 }
 
 .copyrights-text {
-  transition: color 0.3s ease;
   max-width: 200px;
-}
-
-.copyrights__svg--html-academy {
-  transition: color 0.3s ease;
-
-  &:hover,
-  &:focus {
-    color: $button-color;
-  }
-}
-
-.copyrights-text:hover + .copyrights__svg--html-academy,
-.copyrights__svg--html-academy:hover + .copyrights-text,
-.copyrights-text:hover,
-.copyrights__svg--html-academy:hover {
-  color: $button-color;
+  color: $text-color;
 }

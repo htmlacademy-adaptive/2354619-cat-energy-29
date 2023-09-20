@@ -9,11 +9,11 @@
 </head>
 <body class="page__body">
     <header class="main-header">
-      <div class="main-header__container">
+      <div class="main-header__container main-header__container--form">
         <nav class="main-nav main-nav--open">
 
           <div class="main-header__nav-container main-header__nav-container--form">
-            <a class="main-header__logo" href="#">
+            <a class="main-header__logo" href="index.html">
               <picture>
                 <source media="(min-width: 1220px)" srcset="img/all-svg/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/all-svg/logo-tablet.svg">
@@ -24,10 +24,10 @@
               <img class="main-header__text-logo-img" src="img/svg/sprite.svg#cat-energy" width="101" height="18" alt="название Cat energy">
             </span>
             <button class="main-header__burger-menu" type="button" id="toggleButton">
-              <svg class="main-header__svg main-header__svg--open main-header__svg1--nojs" width="24" height="24" id="ButtonHidden" aria-label="Иконка открытия меню">
+              <svg class="main-header__svg main-header__svg--open main-header__svg-one main-header__svg-one--nojs" width="24" height="24" id="ButtonHidden" aria-label="Иконка открытия меню">
                 <use xlink:href="img/svg/sprite.svg#mobile-nav-button"></use>
               </svg>
-              <svg class="main-header__svg main-header__svg--close main-header__svg2--nojs" width="20" height="20" id="ButtonNoJs" aria-label="Иконка закрытия меню">
+              <svg class="main-header__svg main-header__svg--close main-header__svg-two main-header__svg-two--nojs" width="20" height="20" id="ButtonNoJs" aria-label="Иконка закрытия меню">
                 <use xlink:href="img/svg/sprite.svg#mobile-nav-button-open"></use>
               </svg>
             </button>
@@ -104,21 +104,21 @@
             </legend>
             <ul class="form__list selection-button">
               <li class="selection-button__item">
-                <label class="selection-button__label selection-button--radio">
+                <label class="selection-button__label selection-button__label--radio">
                   <input class="visually-hidden selection-button__input" type="radio" name="selection-radio" value="weight-loss" checked>
                   <span class="selection-button__span"></span>
                   Похудение
                 </label>
               </li>
               <li class="selection-button__item">
-                <label class="selection-button__label selection-button--radio">
+                <label class="selection-button__label selection-button__label--radio">
                   <input class="visually-hidden selection-button__input" type="radio" name="selection-radio" value="weight-gain">
                   <span class="selection-button__span"></span>
                   Набор массы
                 </label>
               </li>
               <li class="selection-button__item">
-                <label class="selection-button__label selection-button--radio">
+                <label class="selection-button__label selection-button__label--radio">
                   <input class="visually-hidden selection-button__input" type="radio" name="selection-radio" value="idk">
                   <span class="selection-button__span"></span>
                   Не знаю (Нужен ваш совет)
@@ -251,7 +251,7 @@
     <div class="main-footer__wrapper container">
       <div class="main-footer__logo-container">
         <a class="main-footer__logo-title main-title-link" href="#">
-          <svg class="main-footer__svg--cat-energy" width="128" height="25" aria-label="Текстовое лого магазина">
+          <svg class="main-footer__svg main-footer__svg--cat-energy" width="128" height="25" aria-label="Текстовое лого магазина">
             <use xlink:href="img/svg/sprite.svg#cat-energy"></use>
           </svg>
         </a>
@@ -260,21 +260,21 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-              <svg class="social__svg--vk" width="28" height="22" aria-label="Ссылка на группу Вконтакте">
+              <svg class="social__svg social__svg--vk" width="28" height="22" aria-label="Ссылка на группу Вконтакте">
                 <use xlink:href="img/svg/sprite.svg#vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <svg class="social__svg--youtube" width="28" height="22" aria-label="Ссылка на ютуб канал">
+              <svg class="social__svg social__svg--youtube" width="28" height="22" aria-label="Ссылка на ютуб канал">
                 <use xlink:href="img/svg/sprite.svg#youtube"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <svg class="social__svg--telegram" width="28" height="22" aria-label="Ссылка на группу в телеграм">
+              <svg class="social__svg social__svg--telegram" width="28" height="22" aria-label="Ссылка на группу в телеграм">
                 <use xlink:href="img/svg/sprite.svg#telegram"></use>
               </svg>
             </a>
@@ -286,7 +286,7 @@
           <span class="copyrights-text">
             HTML Academy
           </span>
-          <svg class="copyrights__svg--html-academy" width="27" height="34" aria-label="Авторские права от HTML Academy">
+          <svg class="copyrights__svg copyrights__svg--html-academy" width="27" height="34" aria-label="Авторские права от HTML Academy">
             <use xlink:href="img/svg/sprite.svg#html-academy"></use>
           </svg>
         </a>

@@ -73,6 +73,19 @@
   padding: 10px 18px;
   border: 1px solid $form-input;
   width: 100%;
+
+  &:hover {
+    border: 1px solid $border-color;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px solid $text-color;
+  }
+
+  &:invalid {
+    outline: 2px solid $error;
+  }
 }
 
 .form__title {
@@ -138,11 +151,13 @@
 
 .form__personal-container {
   @include form;
+  margin: 0;
 
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
+    margin: 0 auto;
   }
 }
 
@@ -155,7 +170,6 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 18px;
-    width: 626px;
   }
 
   @media (min-width: $desktop) {
@@ -166,12 +180,25 @@
 
 .form__input {
   @include form-description;
-  padding: 13px 14px 12px;
+  padding: 13px 45px 13px 15px;
   width: 100%;
-  border: 1px solid $border-color;
+  border: 1px solid $form-input;
 
   @media (min-width: $tablet) {
-    padding: 11px 20px;
+    padding: 10px 45px 10px 20px;
+  }
+
+  &:hover {
+    border: 1px solid $border-color;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px solid $text-color;
+  }
+
+  &:invalid {
+    outline: 2px solid $error;
   }
 }
 
@@ -257,6 +284,19 @@
   &::placeholder {
     color: $text-color;
     opacity: 1;
+  }
+
+  &:hover {
+    border: 1px solid $border-color;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px solid $text-color;
+  }
+
+  &:invalid {
+    outline: 2px solid $error;
   }
 }
 
