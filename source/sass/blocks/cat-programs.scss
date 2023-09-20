@@ -235,6 +235,11 @@
       background-repeat: no-repeat;
       width: 32px;
       height: 12px;
+
+      @media (min-width: $tablet) {
+        top: 22%;
+        left: 127%;
+      }
     }
   }
 }
