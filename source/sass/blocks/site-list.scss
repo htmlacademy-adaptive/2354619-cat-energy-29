@@ -5,12 +5,13 @@
   padding: 0;
   flex-wrap: wrap;
   flex-direction: column;
+  text-transform: uppercase;
 
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
     max-width: 530px;
-    column-gap: 27px;
+    column-gap: 32px;
   }
 
   &--close {
@@ -94,15 +95,15 @@
     }
   }
 
-  &:last-child {
-    @media (min-width: $tablet) {
-      padding-right: 6px;
-    }
+  // &:last-child {
+  //   @media (min-width: $tablet) {
+  //     padding-right: 6px;
+  //   }
 
-    @media (min-width: $desktop) {
-      padding-right: 5px;
-    }
-  }
+  //   @media (min-width: $desktop) {
+  //     padding-right: 5px;
+  //   }
+  // }
 
   &--current {
     @media (min-width: $tablet) {

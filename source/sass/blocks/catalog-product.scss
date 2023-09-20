@@ -1,11 +1,13 @@
 .catalog-product__title {
   @include hero-title;
   margin: 0;
-  padding: 26px 23px 40px 0;
+  padding: 26px 23px 43px 0;
   color: $title-color;
+  border-bottom: 1px solid $catalog-border;
 
   @media (min-width: $tablet) {
     padding: 64px 30px 95px;
+    border-bottom: none;
   }
 
   @media (min-width: $desktop) {
