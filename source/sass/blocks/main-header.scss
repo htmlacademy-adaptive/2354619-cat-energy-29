@@ -45,6 +45,12 @@
   @media (min-width: $tablet) {
     padding: 0 22px 0 35px;
   }
+
+  &--index,
+  &--form,
+  &--catalog {
+    padding: 0;
+  }
 }
 
 .main-header__nav-container {
@@ -58,7 +64,7 @@
   }
 
   &--form {
-    border: 1px solid $border-line;
+    border-bottom: 1px solid $border-line;
     padding: 13px 15px 11px 19px;
 
     @media (min-width: 768px) {
@@ -138,12 +144,12 @@
   }
 }
 
-.main-header__svg2--nojs {
+.main-header__svg-two--nojs {
   display: block;
   opacity: 1;
   z-index: 1;
 }
 
-.main-header__svg1--nojs {
+.main-header__svg-one--nojs {
   display: none;
 }

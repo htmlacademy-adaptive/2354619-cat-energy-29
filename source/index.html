@@ -12,11 +12,11 @@
 </head>
 <body class="page__body">
   <header class="main-header main-header--index">
-    <div class="main-header__container">
+    <div class="main-header__container main-header__container--index">
       <nav class="main-nav main-nav--open">
 
         <div class="main-header__nav-container">
-          <a class="main-header__logo" href="#">
+          <a class="main-header__logo" href="index.html">
             <picture>
               <source media="(min-width: 1220px)" srcset="img/all-svg/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/all-svg/logo-tablet.svg">
@@ -27,10 +27,10 @@
             <img class="main-header__text-logo-img" src="img/svg/sprite.svg#cat-energy" width="101" height="18" alt="название Cat energy">
           </span>
           <button class="main-header__burger-menu" type="button" id="toggleButton">
-            <svg class="main-header__svg main-header__svg--open main-header__svg1--nojs" width="24" height="24" id="ButtonHidden" aria-label="Иконка открытия меню">
+            <svg class="main-header__svg main-header__svg--open main-header__svg-one main-header__svg-one--nojs" width="24" height="24" id="ButtonHidden" aria-label="Иконка открытия меню">
               <use xlink:href="img/svg/sprite.svg#mobile-nav-button"></use>
             </svg>
-            <svg class="main-header__svg main-header__svg--close main-header__svg2--nojs" width="20" height="20" id="ButtonNoJs" aria-label="Иконка закрытия меню">
+            <svg class="main-header__svg main-header__svg--close main-header__svg-two main-header__svg-two--nojs" width="20" height="20" id="ButtonNoJs" aria-label="Иконка закрытия меню">
               <use xlink:href="img/svg/sprite.svg#mobile-nav-button-open"></use>
             </svg>
           </button>
@@ -66,6 +66,9 @@
         </p>
         <div class="main-hero__picture">
           <picture>
+            <source media="(min-width: 1220px)" srcset="img/hero-image-desktop.webp 1x, img/hero-image-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/hero-image-tablet.webp 1x, img/hero-image-tablet@2x.webp 2x">
+            <source srcset="img/hero-image-desktop.webp 1x, img/hero-image-desktop@2x.webp 2x" type="image/webp" width="280" height="270">
             <source media="(min-width: 1220px)" srcset="img/hero-image-desktop.png 1x, img/hero-image-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/hero-image-tablet.png 1x, img/hero-image-tablet@2x.png 2x">
             <img class="main-hero__image" src="img/hero-image-desktop.png" srcset="img/hero-image-desktop@2x.png" width="280" height="270" alt="Продукция магазина">
@@ -97,9 +100,6 @@
                 <span class="cat-programs__catalog">
                   Каталог slim
                 </span>
-                <svg class="cat-programs__icon" width="32" height="12" aria-label="Иконка стрелки">
-                  <use xlink:href="img/svg/sprite.svg#icon-arrow"></use>
-                </svg>
               </a>
             </div>
           </li>
@@ -115,9 +115,6 @@
                 <span class="cat-programs__catalog">
                   Каталог pro
                 </span>
-                <svg class="cat-programs__icon" width="32" height="12" aria-label="Иконка стрелки">
-                  <use xlink:href="img/svg/sprite.svg#icon-arrow"></use>
-                </svg>
               </a>
             </div>
           </li>
@@ -192,16 +189,22 @@
         <div class="example__section--two" data-container>
           <div class="example__cats-container example__cats-container--before" data-image1>
             <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-before-tablet@1x.webp 1x, img/cat-before-tablet@2x.webp 2x">
+              <source media="(min-width: 320px)" srcset="img/cat-before-mobile@1x.webp 1x, img/cat-before-mobile@2x.webp 2x">
+              <source srcset="img/cat-before-mobile.webp 1x, img/cat-before-mobile@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/cat-before-tablet@1x.png 1x, img/cat-before-tablet@2x.png 2x">
               <source media="(min-width: 320px)" srcset="img/cat-before-mobile@1x.png 1x, img/cat-before-mobile@2x.png 2x">
-              <img class="example__cat-img" src="img/cat-before-mobile@1x.png" srcset="img/cat-before-mobile@2x.png 2x" alt="Толстый тигровый кот с белой мордочкой">
+              <img class="example__cat-img" src="img/cat-before-mobile@1x.png" srcset="img/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый тигровый кот с белой мордочкой">
             </picture>
           </div>
           <div class="example__cats-container example__cats-container--after" data-image2>
             <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-after-tablet@1x.webp 1x, img/cat-after-tablet@2x.webp 2x">
+              <source media="(min-width: 320px)" srcset="img/cat-after-mobile@1x.webp 1x, img/cat-after-mobile@2x.webp 2x">
+              <source srcset="img/cat-after-mobile.webp 1x, img/cat-after-mobile@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/cat-after-tablet@1x.png 1x, img/cat-after-tablet@2x.png 2x">
               <source media="(min-width: 320px)" srcset="img/cat-after-mobile@1x.png 1x, img/cat-after-mobile@2x.png 2x">
-              <img class="example__cat-img" src="img/cat-after-mobile@1x.png" srcset="img/cat-after-mobile@2x.png 2x" alt="Худой бело-серый кот с разноцветной мордочкой">
+              <img class="example__cat-img" src="img/cat-after-mobile@1x.png" srcset="img/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Худой бело-серый кот с разноцветной мордочкой">
             </picture>
           </div>
           <button class="example__button-slider" type="button" data-button>
@@ -240,7 +243,7 @@
     <div class="main-footer__wrapper container">
       <div class="main-footer__logo-container">
         <a class="main-footer__logo-title main-title-link" href="#">
-          <svg class="main-footer__svg--cat-energy" width="128" height="25" aria-label="Текстовое лого магазина">
+          <svg class="main-footer__svg main-footer__svg--cat-energy" width="128" height="25" aria-label="Текстовое лого магазина">
             <use xlink:href="img/svg/sprite.svg#cat-energy"></use>
           </svg>
         </a>
@@ -249,21 +252,21 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-              <svg class="social__svg--vk" width="28" height="22" aria-label="Ссылка на группу Вконтакте">
+              <svg class="social__svg social__svg--vk" width="28" height="22" aria-label="Ссылка на группу Вконтакте">
                 <use xlink:href="img/svg/sprite.svg#vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <svg class="social__svg--youtube" width="28" height="22" aria-label="Ссылка на ютуб канал">
+              <svg class="social__svg social__svg--youtube" width="28" height="22" aria-label="Ссылка на ютуб канал">
                 <use xlink:href="img/svg/sprite.svg#youtube"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <svg class="social__svg--telegram" width="28" height="22" aria-label="Ссылка на группу в телеграм">
+              <svg class="social__svg social__svg--telegram" width="28" height="22" aria-label="Ссылка на группу в телеграм">
                 <use xlink:href="img/svg/sprite.svg#telegram"></use>
               </svg>
             </a>
@@ -275,7 +278,7 @@
           <span class="copyrights-text">
             HTML Academy
           </span>
-          <svg class="copyrights__svg--html-academy" width="27" height="34" aria-label="Авторские права от HTML Academy">
+          <svg class="copyrights__svg copyrights__svg--html-academy" width="27" height="34" aria-label="Авторские права от HTML Academy">
             <use xlink:href="img/svg/sprite.svg#html-academy"></use>
           </svg>
         </a>

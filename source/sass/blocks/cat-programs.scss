@@ -184,8 +184,7 @@
   font-family: $oswald;
   text-decoration: none;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 
 .cat-programs__button-container {
@@ -206,17 +205,31 @@
     font-size: 20px;
     line-height: 30px;
   }
-}
 
-.cat-programs__icon {
-  margin-left: 17px;
-  transition: transform 0.3s ease-in-out;
-
-  @media (min-width: $tablet) {
-    margin-left: 26px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 124%;
+    width: 25px;
+    height: 12px;
+    background-image: url("../img/all-svg/icon-arrow.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    transition: all 0.1s linear;
   }
 
-  &:hover {
-    transform: translateX(10px);
+  &:hover,
+  &:focus {
+    &::after {
+      position: absolute;
+      background-image: url("../img/all-svg/icon-arrow-long.svg");
+      top: 25%;
+      left: 124%;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 12px;
+    }
   }
 }

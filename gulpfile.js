@@ -104,8 +104,6 @@ function server(done) {
     },
     cors: true,
     notify: false,
-    ui: false,
-    browser: "opera"
   });
   done();
 }

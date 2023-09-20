@@ -183,7 +183,7 @@
 .main-hero__hero-button {
   @include button-main;
   @include button-state;
-
+  max-width: 400px;
   margin: 0 20px;
   order: 3;
   margin-top: 12px;
