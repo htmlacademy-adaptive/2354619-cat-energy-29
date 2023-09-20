@@ -5,6 +5,7 @@
   padding: 0;
   flex-wrap: wrap;
   flex-direction: column;
+  text-transform: uppercase;
 
   @media (min-width: $tablet) {
     flex-direction: row;

@@ -70,14 +70,14 @@ document.addEventListener("DOMContentLoaded", function() {
 // Кнопка при отключенном JS
 
 document.addEventListener("DOMContentLoaded", function() {
-  const ButtonNoJs = document.querySelector('.main-header__svg2--nojs');
-  const ButtonHidden = document.querySelector('.main-header__svg1--nojs');
+  const ButtonNoJs = document.querySelector('.main-header__svg-two--nojs');
+  const ButtonHidden = document.querySelector('.main-header__svg-one--nojs');
 
   if (ButtonNoJs) {
-    ButtonNoJs.classList.remove('main-header__svg2--nojs')
+    ButtonNoJs.classList.remove('main-header__svg-two--nojs')
   }
 
   if (ButtonHidden) {
-    ButtonHidden.classList.remove('main-header__svg1--nojs')
+    ButtonHidden.classList.remove('main-header__svg-one--nojs')
   }
 });
