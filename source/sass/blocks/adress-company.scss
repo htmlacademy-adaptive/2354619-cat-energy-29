@@ -71,10 +71,16 @@
   background-color: $card-color;
 
   @media (min-width: $tablet) {
-    padding: 60px 66px 60px 74px;
+    padding: 61px 71px 60px 69px;
   }
 
   @media (min-width: $desktop) {
     background-color: $bgcolor;
+  }
+
+  &--form {
+    @media (min-width: $tablet) {
+      padding: 61px 66px 60px 73px;
+    }
   }
 }

@@ -41,7 +41,7 @@
 
 .cat-programs__item {
   background-color: $card-color;
-  padding: 30px 20px 20px;
+  padding: 30px 20px 19px;
   position: relative;
 
   &::before {
@@ -210,13 +210,18 @@
     content: "";
     position: absolute;
     top: 25%;
-    left: 124%;
+    left: 121%;
     width: 25px;
     height: 12px;
     background-image: url("../img/all-svg/icon-arrow.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     transition: all 0.1s linear;
+
+    @media (min-width: $tablet) {
+      top: 22%;
+      left: 127%;
+    }
   }
 
   &:hover,
@@ -225,7 +230,7 @@
       position: absolute;
       background-image: url("../img/all-svg/icon-arrow-long.svg");
       top: 25%;
-      left: 124%;
+      left: 121%;
       background-position: 0 0;
       background-repeat: no-repeat;
       width: 32px;
