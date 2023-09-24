@@ -157,7 +157,7 @@
   }
 }
 
-.cat-programs__description {
+.cat-programs__desciption {
   @include cat-programs-subtitle;
 
   padding-bottom: 21px;
@@ -185,6 +185,10 @@
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .cat-programs__button-container {

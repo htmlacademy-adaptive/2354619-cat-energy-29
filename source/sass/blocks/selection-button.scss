@@ -41,6 +41,10 @@
   &:disabled {
     border-color: $error;
   }
+
+  &:focus-visible {
+    outline: solid 2px $example-slider;
+  }
 }
 
 .selection-button__span {
@@ -86,4 +90,17 @@
     width: 20px;
     height: 20px;
   }
+
+  &:hover ~ span {
+    border-color: $example-slider;
+  }
+
+  &:focus-visible + span {
+    border-color: $example-slider;
+    outline: 1px solid $title-color;
+  }
+}
+
+.selection-button__input[type="radio"]:focus + .selection-button__span::before {
+  outline: solid 2px $example-slider;
 }

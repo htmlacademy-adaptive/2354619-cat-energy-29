@@ -11,7 +11,7 @@
     flex-direction: row;
     justify-content: space-between;
     max-width: 530px;
-    column-gap: 32px;
+    column-gap: 34px;
   }
 
   &--close {
@@ -30,10 +30,30 @@
       left: 0;
       transform: translateY(100%);
     }
+
+    &:last-child {
+      @media (min-width: $tablet) {
+        padding-right: 5px;
+      }
+
+      @media (min-width: $desktop) {
+        padding-right: 2px;
+      }
+    }
   }
 
   &--nojs {
     display: flex;
+  }
+
+  &--form:last-child {
+    @media (min-width: $tablet) {
+      padding-right: 9px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-right: 2px;
+    }
   }
 }
 
@@ -94,16 +114,6 @@
       color: $text-color2;
     }
   }
-
-  // &:last-child {
-  //   @media (min-width: $tablet) {
-  //     padding-right: 6px;
-  //   }
-
-  //   @media (min-width: $desktop) {
-  //     padding-right: 5px;
-  //   }
-  // }
 
   &--current {
     @media (min-width: $tablet) {

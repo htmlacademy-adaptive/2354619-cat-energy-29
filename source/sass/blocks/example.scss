@@ -55,13 +55,13 @@
   }
 }
 
-.example__description {
+.example__desciption {
   @include all-content-subtitle;
 
   margin-bottom: 18px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 57px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: $desktop) {
@@ -279,7 +279,7 @@
   }
 }
 
-.example__trumb-slider {
+.example__thumb-slider {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -288,11 +288,11 @@
   transition: color 0.5s ease;
 }
 
-.example__button-slider:hover .example__trumb-slider {
+.example__button-slider:hover .example__thumb-slider {
   color: $button-color;
 }
 
-.example__button-slider:active .example__trumb-slider {
+.example__button-slider:active .example__thumb-slider {
   color: $slider-pressed;
 }
 

@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="title" content="HTML Academy: Cat Energy">
+  <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>HTML Academy: Cat Energy</title>
+  <link rel="icon" type="image/png" sizes="152x152" href="img/favicon/favicon-big.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-medium.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-small.png">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
@@ -462,9 +467,9 @@
               <p class="catalog-more__subtitle">
                 На самом деле вкусов гораздо больше!
               </p>
-              <button class="catalog-more__button button" type="button">
+              <a class="catalog-more__button button" href="#">
                 Показать все
-              </button>
+              </a>
             </div>
           </li>
         </ul>
@@ -576,7 +581,7 @@
               <use xlink:href="img/svg/sprite.svg#icon-gift"></use>
             </svg>
           </div>
-          <span class="promo__discription">
+          <span class="promo__desciption">
             Закажите все<br>и получите чехол для кота в подарок!
           </span>
         </div>
@@ -585,14 +590,14 @@
   </main>
 
   <footer class="main-footer">
-    <section class="adress-company">
-      <div class="adress-company__container adress-company__pages">
-        <h2 class="adress-company__invite">
+    <section class="address-company">
+      <div class="address-company__container address-company__pages address-company__pages--catalog">
+        <h2 class="address-company__invite">
           Приглашаем<br>к сотрудничеству дилеров!
         </h2>
-        <address class="adress-company__adress">
-          <span class="adress-company__element1">ул. Большая<br>Конюшенная, д. 19/8</span>
-          <span class="adress-company__element2">Санкт-Петербург</span>
+        <address class="address-company__address">
+          <span class="address-company__element1">ул. Большая<br>Конюшенная, д. 19/8</span>
+          <span class="address-company__element2">Санкт-Петербург</span>
         </address>
       </div>
       <div class="map" id="map">
@@ -642,7 +647,7 @@
       </div>
       <div class="main-footer__copyrights copyrights">
         <a class="copyrights__button" href="https://htmlacademy.ru/">
-          <span class="copyrights-text">
+          <span class="copyrights__text">
             HTML Academy
           </span>
           <svg class="copyrights__svg copyrights__svg--html-academy" width="27" height="34" aria-label="Авторские права от HTML Academy">
