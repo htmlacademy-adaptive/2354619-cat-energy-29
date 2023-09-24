@@ -151,7 +151,7 @@
   }
 }
 
-@mixin form-description {
+@mixin form-desciption {
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -252,7 +252,7 @@
   margin: 0 auto;
 
   @media (min-width: $tablet) {
-    padding: 0 75px;
+    padding: 0 70px;
   }
 
   @media (min-width: $desktop) {

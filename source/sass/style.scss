@@ -1,8 +1,8 @@
 @import "./global/variables.scss";
 @import "./global/basic.scss";
+@import "./global/fonts.scss";
 @import "./global/button.scss";
 @import "./global/visually-hidden.scss";
-@import "./global/fonts.scss";
 @import "./global/viewports.scss";
 @import "./global/mixin.scss";
 @import "./global/container.scss";
@@ -30,3 +30,4 @@
 @import "./blocks/extra-button.scss";
 @import "./blocks/map.scss";
 @import "./blocks/elements.scss";
+@import "./blocks/form-button-span.scss";

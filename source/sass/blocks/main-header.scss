@@ -1,7 +1,17 @@
 .main-header {
   @include container-hero;
-
+  width: 100%;
   color: $text-color;
+
+  &--form {
+    @media (min-width: $tablet) {
+      padding: 0 22px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 0 110px;
+    }
+  }
 
   &--index {
     @media (min-width: $desktop) {
@@ -94,6 +104,16 @@
 
 .main-header__logo {
   display: block;
+
+  &--form {
+    @media (min-width: $tablet) {
+      padding-left: 8px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 0;
+    }
+  }
 }
 
 .main-header__logo-image {

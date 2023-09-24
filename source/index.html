@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="title" content="HTML Academy: Cat Energy">
+  <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>HTML Academy: Cat Energy</title>
   <link rel="icon" type="image/png" sizes="152x152" href="img/favicon/favicon-big.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-medium.png">
@@ -92,7 +94,7 @@
             <h3 class="cat-programs__title">
               Похудение
             </h3>
-            <p class="cat-programs__description">
+            <p class="cat-programs__desciption">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
             <div class="cat-programs__button-container">
@@ -107,7 +109,7 @@
             <h3 class="cat-programs__title">
               Набор массы
             </h3>
-            <p class="cat-programs__description">
+            <p class="cat-programs__desciption">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
             <div class="cat-programs__button-container">
@@ -154,11 +156,11 @@
 
     <section class="example">
       <div class="example__container container">
-        <div class="example__section--one">
+        <div class="example__section example__section--one">
           <h2 class="example__title">
             Живой пример
           </h2>
-          <p class="example__description">
+          <p class="example__desciption">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
           <div class="example__elements-wrapper">
@@ -166,11 +168,11 @@
               <dl class="example__elements elements-result">
                 <div class="elements-result__wrapper">
                   <dt class="elements-result__index-number">5 кг</dt>
-                  <dd class="elements-result__index-description">снижение веса</dd>
+                  <dd class="elements-result__index-desciption">снижение веса</dd>
                 </div>
                 <div class="elements-result__wrapper">
                   <dt class="elements-result__index-number">60 дней</dt>
-                  <dd class="elements-result__index-description">затрачено времени</dd>
+                  <dd class="elements-result__index-desciption">затрачено времени</dd>
                 </div>
               </dl>
             </div>
@@ -186,7 +188,7 @@
             </div>
           </div>
         </div>
-        <div class="example__section--two" data-container>
+        <div class="example__section example__section--two" data-container>
           <div class="example__cats-container example__cats-container--before" data-image1>
             <picture>
               <source media="(min-width: 768px)" srcset="img/cat-before-tablet@1x.webp 1x, img/cat-before-tablet@2x.webp 2x">
@@ -208,8 +210,8 @@
             </picture>
           </div>
           <button class="example__button-slider" type="button" data-button>
-            <svg class="example__trumb-slider" width="40" height="40" aria-label="Слайдер с котами">
-              <use xlink:href="img/svg/sprite.svg#trumb-slider"></use>
+            <svg class="example__thumb-slider" width="40" height="40" aria-label="Слайдер с котами">
+              <use xlink:href="img/svg/sprite.svg#thumb-slider"></use>
             </svg>
           </button>
         </div>
@@ -218,14 +220,14 @@
   </main>
 
   <footer class="main-footer">
-    <section class="adress-company">
-      <div class="adress-company__container">
-        <h2 class="adress-company__invite">
+    <section class="address-company">
+      <div class="address-company__container">
+        <h2 class="address-company__invite">
           Приглашаем<br>к сотрудничеству дилеров!
         </h2>
-        <address class="adress-company__adress">
-          <span class="adress-company__element1">ул. Большая<br>Конюшенная, д. 19/8</span>
-          <span class="adress-company__element2">Санкт-Петербург</span>
+        <address class="address-company__address">
+          <span class="address-company__element1">ул. Большая<br>Конюшенная, д. 19/8</span>
+          <span class="address-company__element2">Санкт-Петербург</span>
         </address>
       </div>
       <div class="map" id="map">
@@ -240,7 +242,7 @@
       </div>
     </section>
 
-    <div class="main-footer__wrapper container">
+    <div class="main-footer__wrapper main-footer__wrapper--index container">
       <div class="main-footer__logo-container">
         <a class="main-footer__logo-title main-title-link" href="#">
           <svg class="main-footer__svg main-footer__svg--cat-energy" width="128" height="25" aria-label="Текстовое лого магазина">
@@ -275,7 +277,7 @@
       </div>
       <div class="main-footer__copyrights copyrights">
         <a class="copyrights__button" href="https://htmlacademy.ru/">
-          <span class="copyrights-text">
+          <span class="copyrights__text">
             HTML Academy
           </span>
           <svg class="copyrights__svg copyrights__svg--html-academy" width="27" height="34" aria-label="Авторские права от HTML Academy">

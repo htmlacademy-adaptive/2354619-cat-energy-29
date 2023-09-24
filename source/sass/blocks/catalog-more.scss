@@ -44,13 +44,14 @@
   color: $text-color;
   font-size: 16px;
   cursor: pointer;
+  margin-top: auto;
 
   @media (min-width: $tablet) {
-    margin-top: 60px;
+    margin-bottom: 37px;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 70px;
+    margin-bottom: 37px;
   }
 
   &:hover,
@@ -69,8 +70,12 @@
   margin-top: 25px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 36px;
+    margin-bottom: 47px;
     margin-top: 49px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 37px;
   }
 }
 

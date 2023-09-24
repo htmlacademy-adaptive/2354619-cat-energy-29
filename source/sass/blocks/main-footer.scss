@@ -1,6 +1,5 @@
 .main-footer {
   background-color: $card-color;
-  position: sticky;
 }
 
 .main-footer__wrapper {
@@ -12,20 +11,36 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 56px 28px 56px 34px;
+    padding: 55px 30px 59px 30px;
   }
 
   @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 66px 109px 70px;
+    padding: 66px 110px 70px;
+  }
+
+  &--index {
+    @media (min-width: $desktop) {
+      padding: 66px 110px 70px;
+    }
+  }
+
+  &--form {
+    @media (min-width: $tablet) {
+      padding: 55px 30px 59px 30px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 65px 110px 59px 109px;
+    }
   }
 }
 
 .main-footer__logo-container {
   text-align: center;
-  padding: 40px 0 20px;
+  padding: 36px 0 19px;
   display: flex;
   justify-content: center;
 

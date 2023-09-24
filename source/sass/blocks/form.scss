@@ -1,5 +1,5 @@
 .form {
-  @include form-description;
+  @include form-desciption;
 }
 
 .form__legend {
@@ -48,7 +48,6 @@
 
     @media (min-width: $tablet) {
       border: 0;
-      padding: 0 67px 0 73px;
     }
 
     @media (min-width: $desktop) {
@@ -69,7 +68,7 @@
 }
 
 .form__placeholder {
-  @include form-description;
+  @include form-desciption;
 
   padding: 12px 15px;
   border: 1px solid $form-input;
@@ -106,7 +105,7 @@
 
   @media (min-width: $tablet) {
     max-width: max-content;
-    padding: 0 43px;
+    padding: 0 40px;
   }
 
   @media (min-width: $desktop) {
@@ -130,7 +129,7 @@
   margin: 11px 0 38px;
 
   @media (min-width: $tablet) {
-    margin-top: 47px;
+    margin-top: 44px;
     margin-bottom: 87px;
   }
 
@@ -158,15 +157,12 @@
   @include form;
   margin: 0;
 
-  @media (min-width: $tablet) {
-    padding: 0 67px 0 73px;
-  }
-
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     margin: 0 auto;
+    padding: 0 72px 0 73px;
   }
 }
 
@@ -188,7 +184,7 @@
 }
 
 .form__input {
-  @include form-description;
+  @include form-desciption;
   padding: 13px 45px 13px 15px;
   width: 100%;
   border: 1px solid $form-input;
@@ -217,32 +213,12 @@
   display: block;
   stroke: $title-color;
 
+  @media (min-width: $desktop) {
+    right: 16px;
+  }
+
   &:hover {
     stroke: $button-color;
-  }
-}
-
-.form-button-span {
-  @include form;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 31px;
-  padding: 0;
-
-  @media (min-width: $tablet) {
-    column-gap: 59px;
-    margin-top: 50px;
-    margin-bottom: 60px;
-    flex-direction: row;
-    padding: 0 44px;
-  }
-
-  @media (min-width: $desktop) {
-    column-gap: 80px;
-    margin-bottom: 80px;
-    margin-top: 61px;
-    padding: 0;
   }
 }
 
@@ -280,7 +256,7 @@
 }
 
 .form__textarea {
-  @include form-description;
+  @include form-desciption;
   padding: 14px 14px;
   width: 100%;
   min-height: 150px;
